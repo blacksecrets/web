@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Black Secrets – Alice in Chains Tribute</title>
+  <style>
+    :root {
+      --bg-color: #111;
+      --text-color: #eee;
+      --accent-color: #fff;
+      --overlay-bg: rgba(0, 0, 0, 0.8);
+      --max-width: 1000px;
+      --font-main: 'Segoe UI', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg-color) url('images/bsBlackLogoCropped.png') center center no-repeat;
+      background-size: 600px;
+      background-attachment: fixed;
+      color: var(--text-color);
+      font-family: var(--font-main);
+    }
+
+    nav {
+      background: #000;
+      padding: 15px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .logoSmall {
+      max-width: 100px;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+
+    .logoMedium {
+      max-width: 500px;
+      margin-bottom: 20px;
+    }
+
+    .logoWide {
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin: 0;
+      color: var(--accent-color);
+      text-shadow: 2px 2px #000;
+    }
+
+    section {
+      background: var(--overlay-bg);
+      padding: 40px 20px;
+      max-width: var(--max-width);
+      margin: 30px auto;
+      border-radius: 10px;
+    }
+
+    h2 {
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    footer {
+      text-align: left;
+      padding: 20px;
+      font-size: 0.9em;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+ /* table td { width: 20em; border: 1px solid black; }*/
+    table td:nth-child(2) { text-align: end; }
+
+/* Test Video Stype */
+/* Test Video Stype */
+/* Test Video Stype */
+/* Test Video Stype */
+
+.video-container {
+      position: relative;
+      width: 200px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .thumbnail {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .video-player {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+
+    .video-player iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    .video-container.active {
+      width: 560px;
+      height: 315px;
+    }
+
+    .thumbnail::after {
+      content: '\25B6'; /* Unicode for play button (▶) */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 40px;
+      color: white;
+      background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for visibility */
+      border-radius: 50%; /* Circular background */
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1; /* Ensure it’s above the thumbnail */
+      transition: opacity 0.3s ease;
+    }
+
+    .thumbnail:hover::after {
+      opacity: 1; /* Increase visibility on hover */
+    }
+
+    .close-btn {
+      display: none;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 3px;
+      z-index: 10;
+    }
+
+    .video-container.active .close-btn {
+      display: block;
+    }
+/* End Test Video Style */
+/* End Test Video Style */
+/* End Test Video Style */
+/* End Test Video Style */
+
+
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#media">Media</a>
+    <a href="#calendar">Calendar</a>
+    <a href="#contact">Booking/Contact</a>
+  </nav>
+
+  <header>
+    <img src="images/bsLogoColorTransparent.gif" alt="Black Secrets Logo" class="logo">
+    <p> <img src="images/bsNameColorTransparent.png" alt="Black Secrets Name" class="logoWide"> </p> 
+    <p> <img src="images/ATributeToAliceInChainsEaterFontTransparant.png" alt="A Tribute to Alice in Chains" class="logoMedium"> </p>
+  </header>
+
+  <section id="about">
+    <h2>About the Band</h2>
+    <p>Black Secrets is a tribute to the great <strong>Alice in Chains</strong>.
+      Formed in 2024 in Winchester VA, they deliver an authentic and powerful recreation of the legendary Seattle sound.</p>
+    <p>In an recent interview Bobby stated "This has been a dream of mine, to find a group of talented musicians and 
+    put togther a show consisting of the early years of Alice in Chains music." </p>
+    <p>All four members have a great love and are deeply inspired by the orginal line up of Alice In Chains. 
+    They have incorporated the same elements of heavy metal music and tight harmonies. The members of Black Secrets have 
+    grasped the concepts enabling them to replicate the aspects of what made Alice In Chains such a great band. 
+    Their love and dedication to this music shows in every song performance right down to their technique, gear, and dress.</p>
+
+   <p>"We play this music because we love the raw energy it projects. We want the audience to feel the music the same way we do."</p>
+   <table class="center">
+      <tr>
+        <td>
+          Reed Personius – Vocals<br> 
+          <img src="images/Reed.jpg" alt="Reed" class="logo"></td>
+        <td>
+          Bobby Steelman – Guitar<br> 
+          <img src="images/Bobby.jpg" alt="Bobby" class="logo"></td> 
+      </tr>
+      <tr>
+        <td>
+          Rich Burns – Bass<br> 
+          <img src="images/Rich.jpg" alt="Rich" class="logo">
+        </td>
+        <td>
+          Zach Johnson – Drums<br> 
+          <img src="images/Zach.jpg" alt="Zach" class="logo"></td> 
+      </tr>
+    </table>
+    <a href="https://www.facebook.com/wickedphotographybyjess" >
+      Photos courtesy of Wicked Photography by Jess
+    </a>
+  </section>
+
+  <section id="media">
+    <h2>Media</h2>
+    <!-- 
+    <div class="gallery">
+      <img src="images/AI_Black Secrets color name.png" alt="Band Image 1">
+    </div>
+ -->
+    <!-- Test Video -->
+    <!-- Test Video -->
+    <!-- Test Video -->
+
+    <table width="100%" style="border-collapse: collapse; background-color: rgba(0, 0, 0, 0.8); color: #fff;">
+      <tr>
+        <td width="30%">
+          Watch Black Secrets perform <strong>We Die Young</strong>, Live at the Backseat Event Center in Winchester, VA on 10/18/24.
+        </td>
+        <td> 
+          <div class="video-container">
+            <img src="https://img.youtube.com/vi/AC_vJPMMapo/default.jpg" alt="Video Thumbnail" class="thumbnail">
+            <div class="video-player">
+              <iframe src="https://www.youtube.com/embed/AC_vJPMMapo?autoplay=1" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <button class="close-btn">Close</button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td width="30%">
+          Watch Black Secrets perform <strong>Put You Down</strong>, Live at the Backseat Event Center in Winchester, VA on 10/18/24.
+        </td>
+        <td> 
+          <div class="video-container">
+            <img src="https://img.youtube.com/vi/ZOVBvhXhMpg/default.jpg" alt="Video Thumbnail" class="thumbnail">
+            <div class="video-player">
+              <iframe src="https://www.youtube.com/embed/ZOVBvhXhMpg?autoplay=1" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <button class="close-btn">Close</button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td width="30%">
+          Listen to Black Secrets studio recording of <strong>Man in the Box</strong>
+        </td>
+        <td> 
+          <div class="video-container">
+            <img src="images/manInTheBoxLogo.png" alt="Video Thumbnail" class="thumbnail">
+            <div class="video-player">
+              <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2013239755&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/black-secrets" title="Black Secrets" target="_blank" style="color: #cccccc; text-decoration: none;">Black Secrets</a> · <a href="https://soundcloud.com/black-secrets/man-in-the-box-2-short" title="Man In The Box 2 Short" target="_blank" style="color: #cccccc; text-decoration: none;">Man In The Box 2 Short</a></div>
+<!--
+    allow="autoplay" 
+-->
+            </div>
+            <button class="close-btn">Close</button>
+          </div>
+        </td>
+      <tr>
+    </table>
+
+    <script>
+      document.querySelectorAll('.video-container').forEach(container => {
+      const thumbnail = container.querySelector('.thumbnail');
+      const videoPlayer = container.querySelector('.video-player');
+      const closeBtn = container.querySelector('.close-btn');
+      const iframe = videoPlayer.querySelector('iframe');
+
+      thumbnail.addEventListener('click', () => {
+        thumbnail.style.display = 'none';
+        videoPlayer.style.display = 'block';
+        container.classList.add('active');
+      });
+
+      closeBtn.addEventListener('click', () => {
+        videoPlayer.style.display = 'none';
+        thumbnail.style.display = 'block';
+        container.classList.remove('active');
+        // Reset iframe to stop video
+        const src = iframe.src;
+        iframe.src = '';
+        iframe.src = src.replace('?autoplay=1', '');
+      });
+    });
+    
+    </script>
+  </section>
+
+  <section id="calendar">
+    <h2>Calendar</h2>
+    <div class="gallery">
+      <p> 6/21/25<br> Blue Fox<br> Winchester, VA<br> Time-TBD </p>
+      <p> 6/27/25<br> Tilty McFlipperz<br> Martinsburg, WV<br> 8pm-11pm <br>Presented by Wright Live </p>
+      <p> 7/4/25<br> First Night Taylor Pavilion Loudoun Street Mall <br>Winchester, VA <br>6:30pm - 8:30pm </p>
+      <p> 8/9/25<br> Tonidale Pub <br>Oakdale, PA<br> Time-TBD </p>
+      <p> 8/16/25<br> Simple Bar & Grill <br>Washington, DC<br> 9pm-11pm </p>
+      <p> 10/18/25<br> Backseat Bar & Grill <br>Winchester, VA<br> Time-TBD <br>Presented by Wright Live </p>
+    </div>
+  </section>
+
+  <section id="booking-contact">
+    <h2>Booking/Contact</h2>
+    To book <strong>Black Secrets</strong> for your next event, connect with 
+    <strong><a href="https://www.wrightliveevents.com/events" target="_blank">Wright Live</a></strong>
+    or contact us at the information below.
+    <table width="100%" style="border-collapse: collapse; background-color: rgba(0, 0, 0, 0.8); color: #fff;">
+      <tr>
+          <td> 
+            <p>Email: <a href="mailto:blacksecrets2024@gmail.com">blacksecrets2024@gmail.com</a></p>
+            <p>Phone: 540-336-0720</p>
+            <p>Website: <a href="https://blacksecrets.org">blacksecrets.org</a></p>
+            <p>EPK: <a href="./bsepk2.html">Black Secrets EPK</a></p>
+            <p>Mail: Black Secrets, 299 Border Lane, Capon Bridge, WV 26711</p>
+          </td>
+          <td nowrap="nowrap" text-align="right" valign="bottom"> 
+            <a href="https://www.wrightliveevents.com/events" target="_blank" >
+             <img src="images/wrightLiveLogo.avif" alt="Wright Live Logo" class="logoSmall">
+            </a>
+          </td>
+      </tr>
+    </table>
+  </section>
+
+  <footer>
+    <table width="100%" style="border-collapse: collapse; background-color: rgba(0, 0, 0, 0.8); color: #fff;">
+      <tr>
+          <td> 
+            &copy; 2025 Black Secrets. All rights reserved.
+          </td>
+          <td> 
+            <a href="https://www.facebook.com/61556445512513" target="_blank" >
+              <img src="images/facebookLinkImageSmall.png" alt="Black Secrets Logo" class="logo">
+            </a>
+            <a href="https://www.youtube.com/@BlackSecretsBand" target="_blank" >
+              <img src="images/youtubeLinkImageSmall.png" alt="Black Secrets Logo" class="logo">
+            </a>
+          </td>
+      </tr>
+    </table>
+  </footer>
+</body>
+</html>
