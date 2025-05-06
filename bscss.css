@@ -224,3 +224,12 @@ table td:nth-child(2) { text-align: end; }
 .video-container.active .close-btn {
   display: block;
 }
+
+.imagecontainer {
+  /* Container width and height can be set here */
+  width: 600px;
+  height: 200px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
