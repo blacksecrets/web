@@ -1,76 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Black Secrets – Alice in Chains Tribute</title>
-  <style>
-    body {
-      background: #111 url('images/bsBlackLogoCropped.png') center center no-repeat;
-      background-size: 600px;
-      background-attachment: fixed;
-      color: #eee;
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      text-align: center;
-      padding: 100px 20px 40px;
-      background-color: rgba(0, 0, 0, 0.7);
-    }
-    header img.logo {
-      max-width: 300px;
-      margin-bottom: 20px;
-    }
-    header h1 {
-      font-size: 3em;
-      margin: 0;
-      color: #fff;
-      text-shadow: 2px 2px #000;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-      background-color: rgba(0, 0, 0, 0.8);
-      border-radius: 10px;
-      margin-bottom: 30px;
-    }
-    h2 {
-      border-bottom: 2px solid #444;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-    }
-    ul {
-      line-height: 1.6;
-    }
-    .band-photo {
-      width: 100%;
-      margin: 20px 0;
-    }
-    .video-embed {
-      width: 100%;
-      height: 400px;
-      margin: 20px 0;
-    }
-    .contact-info a {
-      color: #0af;
-      text-decoration: none;
-    }
-    footer {
-      background-color: #222;
-      color: #aaa;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-    }
-    .logo {
-      max-width: 300px;
-      margin-bottom: 20px;
-    }
-  </style>
+
+  <link rel="stylesheet" href="bscss.css">
+
 </head>
+
 <body>
 
 <header>
@@ -78,7 +18,7 @@
    <img src="images/bsLogoColorTransparent.gif" alt="Black Secrets Logo" class="logo"/>
   </a>
   <h1>Black Secrets</h1>
-  <p>A Tribute to Alice in Chains</p>
+  <h3>A Tribute to Alice in Chains</h3>
 </header>
 
 <section>
@@ -127,26 +67,81 @@
   </ul>
 </section>
 
-<section>
+<section id="media">
   <h2>Media</h2>
-  <br>
-  <div class="video-embed">
-    Watch <strong>Black Secrets</strong> perform <strong>We Die Young</strong>, Live at the Backseat Event Center in Winchester, VA on 10/18/24.
-    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZOVBvhXhMpg" frameborder="0" allowfullscreen></iframe>
-  </div>
-  <br>
-  <br>
-  <div class="video-embed">
-    Watch <strong>Black Secrets</strong> perform <strong>Put You Down</strong>, Live at the Backseat Event Center in Winchester, VA on 10/18/24.
-    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/AC_vJPMMapo" frameborder="0" allowfullscreen></iframe>
-  </div>
-  <br>
-  <br>
-  <div class="video-embed">
-    Listen to <strong>Black Secrets</strong> studio recording of <strong>Man in the Box</strong>.
-    <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2013239755&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/black-secrets" title="Black Secrets" target="_blank" style="color: #cccccc; text-decoration: none;">Black Secrets</a> · <a href="https://soundcloud.com/black-secrets/man-in-the-box-2-short" title="Man In The Box 2 Short" target="_blank" style="color: #cccccc; text-decoration: none;">Man In The Box 2 Short</a></div>
-  </div>
+  <table width="100%" style="border-collapse: collapse; background-color: rgba(0, 0, 0, 0.8); color: #fff;">
+    <tr>
+      <td width="30%">
+        Watch Black Secrets perform <strong>We Die Young</strong>, Live at the Backseat Event Center in Winchester, VA on 10/18/24.
+      </td>
+      <td> 
+        <div class="video-container">
+          <img src="https://img.youtube.com/vi/AC_vJPMMapo/default.jpg" alt="Video Thumbnail" class="thumbnail">
+          <div class="video-player">
+            <iframe src="https://www.youtube.com/embed/AC_vJPMMapo?autoplay=1" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <button class="close-btn">Close</button>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td width="30%">
+        Watch Black Secrets perform <strong>Put You Down</strong>, Live at the Backseat Event Center in Winchester, VA on 10/18/24.
+      </td>
+      <td> 
+        <div class="video-container">
+          <img src="https://img.youtube.com/vi/ZOVBvhXhMpg/default.jpg" alt="Video Thumbnail" class="thumbnail">
+          <div class="video-player">
+            <iframe src="https://www.youtube.com/embed/ZOVBvhXhMpg?autoplay=1" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <button class="close-btn">Close</button>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td width="30%">
+        Listen to Black Secrets studio recording of <strong>Man in the Box</strong>
+      </td>
+      <td> 
+        <div class="video-container">
+          <img src="images/manInTheBoxLogo.png" alt="Video Thumbnail" class="thumbnail">
+          <div class="video-player">
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2013239755&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/black-secrets" title="Black Secrets" target="_blank" style="color: #cccccc; text-decoration: none;">Black Secrets</a> · <a href="https://soundcloud.com/black-secrets/man-in-the-box-2-short" title="Man In The Box 2 Short" target="_blank" style="color: #cccccc; text-decoration: none;">Man In The Box 2 Short</a></div>
+<!--
+  allow="autoplay" 
+-->
+          </div>
+          <button class="close-btn">Close</button>
+        </div>
+      </td>
+    <tr>
+  </table>
 
+  <script>
+    document.querySelectorAll('.video-container').forEach(container => {
+    const thumbnail = container.querySelector('.thumbnail');
+    const videoPlayer = container.querySelector('.video-player');
+    const closeBtn = container.querySelector('.close-btn');
+    const iframe = videoPlayer.querySelector('iframe');
+
+    thumbnail.addEventListener('click', () => {
+      thumbnail.style.display = 'none';
+      videoPlayer.style.display = 'block';
+      container.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      videoPlayer.style.display = 'none';
+      thumbnail.style.display = 'block';
+      container.classList.remove('active');
+      // Reset iframe to stop video
+      const src = iframe.src;
+      iframe.src = '';
+      iframe.src = src.replace('?autoplay=1', '');
+    });
+  });
+  
+  </script>
 </section>
 
   <section id="contact">
