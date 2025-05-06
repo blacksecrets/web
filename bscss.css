@@ -17,7 +17,8 @@ body {
   margin: 0;
   padding: 0;
   background: var(--bg-color) url('images/bsBlackLogoCropped.png') center center no-repeat;
-  background-size: 600px;
+  /*background-size: 600px;*/
+  background-size: contain;
   background-attachment: fixed;
   color: var(--text-color);
   font-family: var(--font-main);
@@ -46,7 +47,7 @@ nav a:hover {
 
 header {
   text-align: center;
-  padding: 80px 20px 40px;
+  padding: 10px 10px 10px;
   background-color: rgba(0, 0, 0, 0.7);
 }
 
