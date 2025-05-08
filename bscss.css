@@ -208,6 +208,10 @@ table td:nth-child(2) { text-align: end; }
   opacity: 1; /* Increase visibility on hover */
 }
 
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
 .close-btn {
   display: none;
   position: absolute;
