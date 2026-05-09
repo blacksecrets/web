@@ -7,6 +7,30 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Black Secrets – Alice in Chains Tribute</title>
 
+	<!-- Sticky Nav CSS -->
+    <style>
+        #nav-placeholder {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #000;
+            width: 100%;
+        }
+        nav {
+            text-align: center;
+            padding: 12px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #c00;
+        }
+    </style>
+
 	<link rel="stylesheet" href="bscss.css">
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="icon" href="bsLogoColorfaviconTransparent.png" type="image/x-icon">
@@ -14,6 +38,9 @@
 </head>
 
 <body>
+	<div id="nav-placeholder"></div>
+  <div id="header-placeholder"></div>
+<!--
 	<nav>
 		<a href="#about">About</a>
 		<a href="#media">Media</a>
@@ -28,6 +55,7 @@
 		<p> <img src="images/ATributeToAliceInChainsEaterFontTransparant.png" alt="A Tribute to Alice in Chains"
 				class="imagecontainer"> </p>
 	</header>
+	-->
 
 	<section id="about">
 		<h2>About the Band</h2>
@@ -175,79 +203,82 @@
 
 	</section>
 
-	<section id="gallery">
-		<h2>Gallery</h2>
-		<div class="gallery2">
-			<img src="images/gallery/thumbs/Backseat2025 (3) thumb.jpg" alt="Image 1" onclick="openModal('modal1')">
-			<img src="images/gallery/thumbs/Backseat2025 (4) thumb.jpg" alt="Image 1" onclick="openModal('modal2')">
-			<img src="images/gallery/thumbs/Backseat2025 (8) thumb.jpg" alt="Image 1" onclick="openModal('modal3')">
-			<img src="images/gallery/thumbs/Backseat2025 (1) thumb.jpg" alt="Image 1" onclick="openModal('modal4')">
+<div id="dynamic-gallery"></div>
+	 <!-- 
+<section id="gallery">
+<h2>Gallery</h2>
+<div class="gallery2">
+<img src="images/gallery/thumbs/Backseat2025 (3) thumb.jpg" alt="Image 1" onclick="openModal('modal1')">
+<img src="images/gallery/thumbs/Backseat2025 (4) thumb.jpg" alt="Image 1" onclick="openModal('modal2')">
+<img src="images/gallery/thumbs/Backseat2025 (8) thumb.jpg" alt="Image 1" onclick="openModal('modal3')">
+<img src="images/gallery/thumbs/Backseat2025 (1) thumb.jpg" alt="Image 1" onclick="openModal('modal4')">
 
-			<img src="images/gallery/thumbs/Backseat2024 (2) thumb.jpg" alt="Image 1" onclick="openModal('modal5')">
-			<img src="images/gallery/thumbs/Backseat2024 (3) thumb.jpg" alt="Image 1" onclick="openModal('modal6')">
-			<img src="images/gallery/thumbs/Backseat2024 (4) thumb.jpg" alt="Image 1" onclick="openModal('modal7')">
-			<img src="images/gallery/thumbs/Backseat2024 (5) thumb.jpg" alt="Image 1" onclick="openModal('modal8')">
+<img src="images/gallery/thumbs/Backseat2024 (2) thumb.jpg" alt="Image 1" onclick="openModal('modal5')">
+<img src="images/gallery/thumbs/Backseat2024 (3) thumb.jpg" alt="Image 1" onclick="openModal('modal6')">
+<img src="images/gallery/thumbs/Backseat2024 (4) thumb.jpg" alt="Image 1" onclick="openModal('modal7')">
+<img src="images/gallery/thumbs/Backseat2024 (5) thumb.jpg" alt="Image 1" onclick="openModal('modal8')">
 
-			<img src="images/gallery/thumbs/Backseat2025 (21) thumb.jpg" alt="Image 1" onclick="openModal('modal9')">
-			<img src="images/gallery/thumbs/Backseat2025 (22) thumb.jpg" alt="Image 1" onclick="openModal('modal10')">
+<img src="images/gallery/thumbs/Backseat2025 (21) thumb.jpg" alt="Image 1" onclick="openModal('modal9')">
+<img src="images/gallery/thumbs/Backseat2025 (22) thumb.jpg" alt="Image 1" onclick="openModal('modal10')">
 
-			<img src="images/gallery/thumbs/LaurenPix (15) thumb.jpg" alt="Image 1" onclick="openModal('modal11')">
-			<img src="images/gallery/thumbs/LaurenPix (28) thumb.jpg" alt="Image 1" onclick="openModal('modal12')">
-		</div>
+<img src="images/gallery/thumbs/LaurenPix (15) thumb.jpg" alt="Image 1" onclick="openModal('modal11')">
+<img src="images/gallery/thumbs/LaurenPix (28) thumb.jpg" alt="Image 1" onclick="openModal('modal12')">
+</div>
 
-		<div id="modal1" class="modal">
-			<span class="close" onclick="closeModal('modal1')">&times;</span>
-			<img class="modal-content" src="images/gallery/Backseat2025 (3).jpg">
-		</div>
-		<div id="modal2" class="modal">
-			<span class="close" onclick="closeModal('modal2')">&times;</span>
-			<img class="modal-content" src="images/gallery/Backseat2025 (4).jpg">
-		</div>
-		<div id="modal3" class="modal">
-			<span class="close" onclick="closeModal('modal3')">&times;</span>
-			<img class="modal-content" src="images/gallery/Backseat2025 (8).jpg">
-		</div>
-		<div id="modal4" class="modal">
-			<span class="close" onclick="closeModal('modal4')">&times;</span>
-			<img class="modal-content" src="images/gallery/Backseat2025 (1).jpg">
-		</div>
+<div id="modal1" class="modal">
+<span class="close" onclick="closeModal('modal1')">&times;</span>
+<img class="modal-content" src="images/gallery/Backseat2025 (3).jpg">
+</div>
+<div id="modal2" class="modal">
+<span class="close" onclick="closeModal('modal2')">&times;</span>
+<img class="modal-content" src="images/gallery/Backseat2025 (4).jpg">
+</div>
+<div id="modal3" class="modal">
+<span class="close" onclick="closeModal('modal3')">&times;</span>
+<img class="modal-content" src="images/gallery/Backseat2025 (8).jpg">
+</div>
+<div id="modal4" class="modal">
+<span class="close" onclick="closeModal('modal4')">&times;</span>
+<img class="modal-content" src="images/gallery/Backseat2025 (1).jpg">
+</div>
 
-		<div id="modal5" class="modal">
-			<span class="close" onclick="closeModal('modal5')">&times;</span>
-			<img class="modal-content" src="images/gallery/Backseat2024 (2).jpg">
-		</div>
-		<div id="modal6" class="modal">
-			<span class="close" onclick="closeModal('modal6')">&times;</span>
-			<img class="modal-content" src="images/gallery/Backseat2024 (3).jpg">
-		</div>
-		<div id="modal7" class="modal">
-			<span class="close" onclick="closeModal('modal7')">&times;</span>
-			<img class="modal-content" src="images/gallery/Backseat2024 (4).jpg">
-		</div>
-		<div id="modal8" class="modal">
-			<span class="close" onclick="closeModal('modal8')">&times;</span>
-			<img class="modal-content" src="images/gallery/Backseat2024 (5).jpg">
-		</div>
+<div id="modal5" class="modal">
+<span class="close" onclick="closeModal('modal5')">&times;</span>
+<img class="modal-content" src="images/gallery/Backseat2024 (2).jpg">
+</div>
+<div id="modal6" class="modal">
+<span class="close" onclick="closeModal('modal6')">&times;</span>
+<img class="modal-content" src="images/gallery/Backseat2024 (3).jpg">
+</div>
+<div id="modal7" class="modal">
+<span class="close" onclick="closeModal('modal7')">&times;</span>
+<img class="modal-content" src="images/gallery/Backseat2024 (4).jpg">
+</div>
+<div id="modal8" class="modal">
+<span class="close" onclick="closeModal('modal8')">&times;</span>
+<img class="modal-content" src="images/gallery/Backseat2024 (5).jpg">
+</div>
 
-		<div id="modal9" class="modal">
-			<span class="close" onclick="closeModal('modal9')">&times;</span>
-			<img class="modal-content" src="images/gallery/Backseat2025 (21).jpg">
-		</div>
-		<div id="modal10" class="modal">
-			<span class="close" onclick="closeModal('modal10')">&times;</span>
-			<img class="modal-content" src="images/gallery/Backseat2025 (22).jpg">
-		</div>
+<div id="modal9" class="modal">
+<span class="close" onclick="closeModal('modal9')">&times;</span>
+<img class="modal-content" src="images/gallery/Backseat2025 (21).jpg">
+</div>
+<div id="modal10" class="modal">
+<span class="close" onclick="closeModal('modal10')">&times;</span>
+<img class="modal-content" src="images/gallery/Backseat2025 (22).jpg">
+</div>
 
-		<div id="modal11" class="modal">
-			<span class="close" onclick="closeModal('modal11')">&times;</span>
-			<img class="modal-content" src="images/gallery/LaurenPix (15).jpg">
-		</div>
-		<div id="modal12" class="modal">
-			<span class="close" onclick="closeModal('modal12')">&times;</span>
-			<img class="modal-content" src="images/gallery/LaurenPix (28).jpg">
-		</div>
+<div id="modal11" class="modal">
+<span class="close" onclick="closeModal('modal11')">&times;</span>
+<img class="modal-content" src="images/gallery/LaurenPix (15).jpg">
+</div>
+<div id="modal12" class="modal">
+<span class="close" onclick="closeModal('modal12')">&times;</span>
+<img class="modal-content" src="images/gallery/LaurenPix (28).jpg">
+</div>
 
-	</section>
+</section>
+-->
 
 	<section id="calendar">
 		<h2>Calendar</h2>
@@ -466,6 +497,8 @@ END: GIGS TEMPLATES -->
 		</table>
 	</section>
 
+	<div id="footer-placeholder"></div>
+	<!--
 	<footer>
 		<table width="100%" style="border-collapse: collapse; background-color: rgba(0, 0, 0, 0.8); color: #fff;">
 			<tr>
@@ -483,11 +516,25 @@ END: GIGS TEMPLATES -->
 			</tr>
 		</table>
 	</footer>
+	-->
 
 	<script src="js/modals.js"></script>
 
 	<script src="js/calendar.js"></script>
+	<script src="js/main.js"></script>
+<script src="js/gallery.js"></script>
+    
+    <script>
+        // Render the gallery after everything loads
+        document.addEventListener('DOMContentLoaded', () => {
+            const galleryContainer = document.getElementById('dynamic-gallery');
+            if (galleryContainer) {
+                galleryContainer.innerHTML = renderGallery();
+            }
+        });
+    </script>
 
 </body>
 
 </html>
+
