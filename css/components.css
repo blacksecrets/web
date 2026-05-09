@@ -1,0 +1,191 @@
+/* =============================================
+   COMPONENTS.CSS
+   Gallery, Media, Calendar, Modals, etc.
+   ============================================= */
+
+/* =============================================
+   COMPONENTS.CSS - Final Fixes
+   ============================================= */
+
+/* ==================== GALLERY ==================== */
+.gallery2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery2 img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.gallery2 img:hover {
+    transform: scale(1.05);
+}
+
+/* Modals */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+.close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1010;
+    text-shadow: 0 0 10px black;
+}
+
+
+/* ==================== MEDIA SECTION - FINAL FIX ==================== */
+.video-container {
+    position: relative;
+    display: inline-block;
+    width: 420px;           /* Larger default size */
+    max-width: 100%;
+    cursor: pointer;
+    margin: 15px auto;
+    display: block;
+}
+
+.thumbnail {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 3px solid #555;
+    border-radius: 6px;
+}
+
+.close-btn {
+    display: none;
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    background: #c00;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 22px;
+    line-height: 28px;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+.video-container.active .close-btn {
+    display: block;
+}
+
+/* Make the iframe bigger when activated */
+.video-container.active iframe {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 560px;
+    max-height: 315px;
+}
+
+/* Hover effect on thumbnails */
+.video-container {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.video-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 80, 80, 0.6);
+}
+
+/* Fix table layout (remove big gap between image and text) */
+#media table td {
+    padding: 15px 10px;
+    vertical-align: middle;
+}
+
+#media table td:first-child {
+    width: 35%;
+    text-align: right;
+    padding-right: 20px;
+}
+
+#media table td:last-child {
+    width: 65%;
+    text-align: left;
+}
+
+/* Make sure video container is centered */
+.video-container {
+    margin: 10px auto;
+    display: block;
+}
+
+/* ==================== DYNAMIC CALENDAR ==================== */
+.events-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)) !important;
+    gap: 25px !important;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.event-tile {
+    background-size: cover;
+    background-position: center;
+    min-height: 320px !important;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+.tile-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.95));
+    padding: 20px;
+    color: white;
+}
+
+.get-details-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: #c00;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+

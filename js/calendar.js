@@ -65,24 +65,21 @@ function renderCalendar() {
     let html = `
         <section id="calendar">
             <h2>Calendar</h2>
-            <div class="gallery">
+            <div class="events-grid">   <!-- Single wrapper for all gigs -->
     `;
 
     gigs.forEach(gig => {
         html += `
-            <div class="events-grid">
-                <div class="event-tile" style="background-image: url('${gig.flyer}');">
-                    <div class="tile-content">
-                        <p><strong>${gig.date}</strong></p>
-                        ${gig.time ? `<p>${gig.time}</p>` : ''}
-                        <h3>${gig.title}</h3>
-                        ${gig.extra ? `<br>${gig.extra}<br>` : ''}
-                        <a href="${gig.detailsUrl}" target="_blank">${gig.venue}<br>${gig.address}</a>
-                    </div>
-                    <a href="${gig.flyerMain}" target="_blank" class="get-details-btn">Details</a>
+            <div class="event-tile" style="background-image: url('${gig.flyer}');">
+                <div class="tile-content">
+                    <p><strong>${gig.date}</strong></p>
+                    ${gig.time ? `<p>${gig.time}</p>` : ''}
+                    <h3>${gig.title}</h3>
+                    ${gig.extra ? `<br>${gig.extra}<br>` : ''}
+                    <a href="${gig.detailsUrl}" target="_blank">${gig.venue}<br>${gig.address}</a>
                 </div>
+                <a href="${gig.flyerMain}" target="_blank" class="get-details-btn">Details</a>
             </div>
-            <br>
         `;
     });
 

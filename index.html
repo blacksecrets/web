@@ -2,38 +2,34 @@
 <html lang="en">
 
 <head>
-
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Black Secrets – Alice in Chains Tribute</title>
 
-	<!-- Sticky Nav CSS -->
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/components.css">
+	<link rel="stylesheet" href="css/utilities.css">
+    
+	<link rel="icon" href="bsLogoColorfaviconTransparent.png" type="image/x-icon">
+
+
+
+
     <style>
-        #nav-placeholder {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background-color: #000;
-            width: 100%;
+        /* Emergency Calendar Fix */
+        .events-grid {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)) !important;
+            gap: 20px !important;
         }
-        nav {
-            text-align: center;
-            padding: 12px 0;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #c00;
+        
+        .event-tile {
+            min-height: 280px !important;
         }
     </style>
 
-	<link rel="stylesheet" href="bscss.css">
-	<link rel="stylesheet" href="css/styles.css">
-	<link rel="icon" href="bsLogoColorfaviconTransparent.png" type="image/x-icon">
+
 
 </head>
 
@@ -325,10 +321,10 @@
 
 
 
+	</section>
 
 		 END ACTIVE GIGS-->
 
-	</section>
 	<section id="contact">
 		<h2>Booking/Contact</h2>
 		To book <strong>Black Secrets</strong> for your next event, please contact

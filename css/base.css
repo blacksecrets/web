@@ -1,0 +1,42 @@
+:root {
+  --bg-color: #111;
+  --text-color: #eee;
+  --accent-color: #fff;
+  --overlay-bg: rgba(0, 0, 0, 0.8);
+  --max-width: 1000px;
+  --font-main: 'Segoe UI', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color) url('images/bsBlackLogoCropped.png') center center no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  color: var(--text-color);
+  font-family: var(--font-main);
+}
+
+h1, h2, h3 {
+  margin: 0 0 15px 0;
+}
+
+h2 {
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #77a3d3;
+}
+
+a:hover {
+  color: #fff;
+  border-bottom: 1px solid #007bff;
+}
