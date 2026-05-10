@@ -1,382 +1,64 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Black Secrets – Alice in Chains Tribute</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Secrets – Alice in Chains Tribute</title>
 
-	<link rel="stylesheet" href="css/base.css">
-	<link rel="stylesheet" href="css/layout.css">
-	<link rel="stylesheet" href="css/components.css">
-	<link rel="stylesheet" href="css/utilities.css">
-    
-	<link rel="icon" href="bsLogoColorfaviconTransparent.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/utilities.css">
 
-
-
-
-    <style>
-        /* Emergency Calendar Fix */
-        .events-grid {
-            display: grid !important;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)) !important;
-            gap: 20px !important;
-        }
-        
-        .event-tile {
-            min-height: 280px !important;
-        }
-    </style>
-
-
-
+    <link rel="icon" href="bsLogoColorfaviconTransparent.png" type="image/x-icon">
 </head>
-
 <body>
-	<div id="nav-placeholder"></div>
-  <div id="header-placeholder"></div>
 
-	<section id="about">
-		<h2>About the Band</h2>
-		<p><strong>Black Secrets</strong> is a tribute to the great <strong>Alice in Chains</strong>.
-			Formed in 2024 in Winchester VA, they deliver an authentic and powerful recreation of the legendary Seattle
-			sound.</p>
-		<p>In a recent interview, guitarist Bobby Steelman stated "This has been a dream of mine, to find a group of
-			talented musicians and
-			put togther a show consisting of the early years of <strong>Alice in Chains</strong> music." </p>
-		<p>All four members have a great love for, and are deeply inspired by, the orginal line up of <strong>Alice in
-				Chains</strong>.
-			They have incorporated the same elements of heavy metal music and tight harmonies. The members of
-			<strong>Black Secrets</strong> have
-			grasped the concepts enabling them to replicate the aspects of what made <strong>Alice in Chains</strong>
-			such a great band.
-			Their love of and dedication to this music shows in every song performance right down to their technique,
-			gear, and dress.</p>
+    <!-- Shared Components -->
+    <div id="nav-placeholder"></div>
+    <div id="header-placeholder"></div>
 
-		<p>"We play this music because we love the raw energy it projects. We want the audience to feel the music the
-			same way we do."</p>
-		<!--width="100%" -->
+    <!-- Dynamic Content Areas -->
+    <div id="dynamic-about"></div>
+    <div id="dynamic-media"></div>
+    <div id="dynamic-gallery"></div>
+    <div id="dynamic-calendar"></div>
 
-		<table class="imagecontainer"
-			style="border-collapse: collapse; background-color: rgba(0, 0, 0, 0.8); color: #fff;">
-			<!--<table class="center"  >-->
-			<tr>
-				<td>
-					Reed Personius – Vocals<br>
-					<img src="images/Reed.jpg" alt="Reed" class="stockimage">
-				</td>
-				<td>
-					Bobby Steelman – Guitar<br>
-					<img src="images/Bobby.jpg" alt="Bobby" class="stockimage">
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Rich Burns – Bass<br>
-					<img src="images/Rich.jpg" alt="Rich" class="stockimage">
-				</td>
-				<td>
-					Zach Johnson – Drums<br>
-					<img src="images/Zach.jpg" alt="Zach" class="stockimage">
-				</td>
-			</tr>
-		</table>
-
-		<a href="https://www.facebook.com/wickedphotographybyjess" target="_blank">
-			Photos courtesy of Wicked Photography by Jess
-		</a>
-
-
-	</section>
-
-	<section id="media">
-		<h2>Media</h2>
-		<table width="100%" style="border-collapse: collapse; background-color: rgba(0, 0, 0, 0.8); color: #fff;">
-			<tr>
-				<td width="30%">
-					<br>
-					Watch <strong>Black Secrets</strong> Promotional Video
-					<br>
-				</td>
-				<td>
-					<div class="video-container">
-						<img src="images/BlackSecretsAiCScary.png" alt="Black Secrets Promo" class="thumbnail">
-						<div class="video-player">
-<iframe src="https://www.youtube.com/embed/6TEQYge02fU?autoplay=1" frameborder="0" allowfullscreen></iframe>
-<!--
-							<iframe src="https://youtu.be/6TEQYge02fU?si=DKBCOyoFoPoTbEF4" frameborder="0" allowfullscreen></iframe>
--->
-
-						</div>
-						<button class="close-btn">Close</button>
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<td width="30%">
-					<br>
-					Watch <strong>Black Secrets</strong> perform <strong>We Die Young</strong>, Live at the Backseat
-					Event Center in Winchester, VA on 12/28/24.
-					<br>
-				</td>
-				<td>
-					<div class="video-container">
-						<img src="https://img.youtube.com/vi/AC_vJPMMapo/default.jpg"
-							alt="Black Secrets, We Die Young, on Youtube" class="thumbnail">
-						<div class="video-player">
-							<iframe src="https://www.youtube.com/embed/AC_vJPMMapo?autoplay=1" frameborder="0"
-								allowfullscreen></iframe>
-						</div>
-						<button class="close-btn">Close</button>
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<td width="30%">
-					<br>
-					Watch <strong>Black Secrets</strong> perform <strong>Put You Down</strong>, Live at the Backseat
-					Event Center in Winchester, VA on 12/28/24.
-					<br>
-				</td>
-				<td>
-					<div class="video-container">
-						<img src="https://img.youtube.com/vi/ZOVBvhXhMpg/default.jpg"
-							alt="Black Secrets, Put You Down, on Youtube" class="thumbnail">
-						<div class="video-player">
-							<iframe src="https://www.youtube.com/embed/ZOVBvhXhMpg?autoplay=1" frameborder="0"
-								allowfullscreen></iframe>
-						</div>
-						<button class="close-btn">Close</button>
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<td width="30%">
-					<br>
-					Listen to <strong>Black Secrets</strong> studio recording of <strong>Man in the Box</strong>
-					<br>
-				</td>
-				<td>
-					<div class="video-container">
-						<img src="images/manInTheBoxLogo.png" alt="Black Secrets, Man in the Box, on Soundcloud"
-							class="thumbnail">
-						<div class="video-player">
-							<iframe width="100%" height="300" scrolling="no" frameborder="no"
-								src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2013239755&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-							<div
-								style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-								<a href="https://soundcloud.com/black-secrets" title="Black Secrets on Soundcloud"
-									target="_blank" style="color: #cccccc; text-decoration: none;">Black Secrets</a> ·
-								<a href="https://soundcloud.com/black-secrets/man-in-the-box-2-short"
-									title="Man In The Box, Short" target="_blank"
-									style="color: #cccccc; text-decoration: none;">Man In The Box 2 Short</a></div>
-							<!--
-									allow="autoplay" 
-								-->
-						</div>
-						<button class="close-btn">Close</button>
-					</div>
-				</td>
-			<tr>
-		</table>
-
-	</section>
-
-	<div id="dynamic-gallery"></div>
-	<div id="dynamic-calendar"></div>
-
-	<!--
-	<section id="calendar">
-		<h2>Calendar</h2>
-
-
-		<div class="gallery">
-
-			<div class="events-grid">
-				<div class="event-tile" style="background-image: url('flyers/20260606RockOnTheHillFlyer.jpg');">
-					<div class="tile-content">
-						<p><strong>Saturday, June 6, 2026</strong></p>
-						<p>11am-11pm</p>
-						<small>
-							<small>
-								<h3>Black Secrets </br>Live at Rock on the Hill Music Festival</h3>
-								With: <strong>
-									12 Stones, Windwalkers, Deadeyes, and MANY MORE!
-								</strong>
-							</small></small><br>
-						<a href="https://rockonthehillpa.com/" title="Rock the Hill at Pleasant Hill Fairground"
-							target="_blank">
-							Click here for tickets<br>
-							Pleasant Hill Fairgrounds<br>
-							3003 Baltimore Pike<br>
-							Hanover, PA 17331<br>
-						</a>
-					</div>
-					<a href="flyers/20260606RockOnTheHillFlyerMain.jpg" target="_blank"
-						class="get-details-btn">Details</a>
-				</div>
-			</div>
-			<br>
-
-			<div class="events-grid">
-				<div class="event-tile" style="background-image: url('flyers/20260627JamminJava.jpg');">
-					<div class="tile-content">
-						<p><strong>Saturday, June 27, 2026</strong></p>
-						<h3>Black Secrets </br>Live at Jammin Java</h3>
-						<br>
-						With: <strong>Siamese Dreamers</strong>
-						<br>
-						<a href="https://www.unionstagepresents.com/shows/siamese-dreamers-tribute-to-smashing-pumpkins-with-primemoose-tribute-to-primus-27-jun"
-							title="Jammin Java" target="_blank">
-							<br>
-							Click here for tickets
-							<br>
-							227 Maple Ave E<br> Vienna, VA 22180<br>
-						</a>
-					</div>
-					<a href="flyers/20260627JamminJava.jpg" target="_blank" class="get-details-btn">Details</a>
-				</div>
-			</div>
-			<br>
-
-			<div class="events-grid">
-				<div class="event-tile" style="background-image: url('flyers/20260703JimBarnettParkFlyer.jpg');">
-					<div class="tile-content">
-						<p><strong>Friday, July 3, 2026</strong></p>
-						<h3>Black Secrets </br>Live at Jim Barnett Park</h3>
-						<br>
-						Time-TBD
-						<br>
-						<br>
-						<a href="https://www.winchesterva.gov/Parks-Recreation/Jim-Barnett-Park"
-							title="Jim Barnett Park" target="_blank"> </a>
-						<br>
-						<a href="https://maps.app.goo.gl/tYbDqZCHzYQfS2K98" title="map" target="_blank">
-							Jim Barnett Park<br>
-							1001 E. Cork Street <br>
-							Winchester, VA 22601<br>
-						</a>
-					</div>
-					<a href="flyers/20260703JimBarnettParkFlyer.jpg" target="_blank" class="get-details-btn">Details</a>
-				</div>
-			</div>
-			<br>
-
-			<div class="events-grid">
-				<div class="event-tile" style="background-image: url('flyers/20261003FirstFridayFlyer.jpg');">
-					<div class="tile-content">
-						<strong>Friday, October 3, 2026</strong>
-						<h3>Black Secrets </br> Live at Taylor Pavillion</h3>
-						<br>
-						Time-TBD
-						<br>
-						<a href="https://wheresthemusic.us/venue/taylor-pavilion/" title="Taylor Pavilion"
-							target="_blank">
-							Taylor Pavillion <br>
-						</a>
-
-						<a href="https://maps.app.goo.gl/CfEakt8kKqWNoQEh6" title="map" target="_blank">
-							119 North Loudoun Street<br>Winchester, VA <br>
-						</a>
-						<br>
-						<small>Presented by
-							<strong>
-								<a href="https://friendsofoldtown.org/" target="_blank">
-									Friends of Old Town
-								</a>
-							</strong>
-						</small>
-					</div>
-					<a href="flyers/20261003FirstFridayFlyer.jpg" target="_blank" class="get-details-btn">Details</a>
-				</div>
-			</div>
-			<br>
-
-			<div class="events-grid">
-				<div class="event-tile" style="background-image: url('flyers/20260710TallyHo.png');">
-					<div class="tile-content">
-						<strong>Friday, July 10, 2026, 7pm</strong>
-						<br>
-						<br>
-						<h3>Black Secrets </br> Live at The Tally Ho Theater</h3>
-							With: <strong>SCHISM</strong>
-						<br>
-						<br>
-						<a href="https://www.ticketweb.com/event/-schism-a-tribute-to-tally-ho-theater-tickets/14850233?pl=tallyho" title="Tally Ho"
-							target="_blank">
-						Click here for tickets
-						<br>
-							Tally Ho Theater <br>
-						</a>
-
-						<a href="https://maps.app.goo.gl/LS4SpnDTCKZYDjW4A" title="map" target="_blank">
-							19 W Market St<br>Leesburg, VA 20176
-						</a>
-						<br>
-					</div>
-					<a href="flyers/20260710TallyHo.png" target="_blank" class="get-details-btn">Details</a>
-				</div>
-			</div>
-
-
-
-	</section>
-
-		 END ACTIVE GIGS-->
-
-	<section id="contact">
-		<h2>Booking/Contact</h2>
-		To book <strong>Black Secrets</strong> for your next event, please contact
-		<strong><a href="https://www.wrightliveevents.com/contact" target="_blank">Wright Live</a></strong>
-		<table width="100%" style="border-collapse: collapse; background-color: rgba(0, 0, 0, 0.8); color: #fff;">
-			<tr>
-				<td>
-					<p>Email: <a href="mailto:wrightliveevents@gmail.com"
-							title="Email us">wrightliveevents@gmail.com</a></p>
-					<p>Phone: 571-330-2615</p>
-					<p>Website: <a href="https://wrightliveevents.com/contact" target="_blank">WrightLiveEvents.com</a>
-					</p>
-					<p>EPK: <a href="./epk.html">Black Secrets EPK</a></p>
-					<p>Mail: Black Secrets, 299 Border Lane, Capon Bridge, WV 26711</p>
-				</td>
-				<td nowrap="nowrap" text-align="right" valign="bottom">
-					<a href="https://www.wrightliveevents.com/events" target="_blank">
-						<img src="images/wrightLiveLogo.avif" alt="Wright Live Logo" class="logoSmall">
-					</a>
-				</td>
-			</tr>
-		</table>
-	</section>
-
-	<div id="footer-placeholder"></div>
-
-	<script src="js/modals.js"></script>
-	<script src="js/calendar.js"></script>
-	<script src="js/gallery.js"></script>
-	<script src="js/main.js"></script>
-
-	<script>
-        // Render dynamic calendar
-        document.addEventListener('DOMContentLoaded', () => {
-            const calendarContainer = document.getElementById('dynamic-calendar');
-            if (calendarContainer) {
-                calendarContainer.innerHTML = renderCalendar();
-            }
-        });
-    </script>
+    <!-- Static Contact Section -->
+<section id="contact">
+    <h2>Booking/Contact</h2>
+    <p>To book <strong>Black Secrets</strong> for your next event, please contact 
+       <strong><a href="https://www.wrightliveevents.com/contact" target="_blank">Wright Live</a></strong></p>
     
-    <script>
-        // Render the gallery after everything loads
-        document.addEventListener('DOMContentLoaded', () => {
-            const galleryContainer = document.getElementById('dynamic-gallery');
-            if (galleryContainer) {
-                galleryContainer.innerHTML = renderGallery();
-            }
-        });
-    </script>
+    <div class="contact-grid">
+        <div class="contact-info">
+            <p><strong>Email:</strong> <a href="mailto:wrightliveevents@gmail.com">wrightliveevents@gmail.com</a></p>
+            <p><strong>Phone:</strong> 571-330-2615</p>
+            <p><strong>Website:</strong> <a href="https://wrightliveevents.com/contact" target="_blank">WrightLiveEvents.com</a></p>
+            <p><strong>EPK:</strong> <a href="./epk.html">Black Secrets EPK</a></p>
+            <p><strong>Mail:</strong> Black Secrets, 299 Border Lane, Capon Bridge, WV 26711</p>
+        </div>
+        
+        <div class="wright-logo">
+            <a href="https://www.wrightliveevents.com/events" target="_blank">
+                <img src="images/wrightLiveLogo.avif" alt="Wright Live Logo" class="logoSmall">
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- Shared Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="js/modals.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/about.js"></script>
+    <script src="js/media.js"></script>
 
 </body>
-
 </html>
-

@@ -1,6 +1,16 @@
-// Reliable pure static loader
-const components = {
-    nav: `
+// =============================================
+// MAIN INITIALIZER
+// =============================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('🚀 Black Secrets site initialized');
+
+    // Shared Components
+    const navPlaceholder = document.getElementById('nav-placeholder');
+    const headerPlaceholder = document.getElementById('header-placeholder');
+    const footerPlaceholder = document.getElementById('footer-placeholder');
+
+    if (navPlaceholder) navPlaceholder.innerHTML = `
         <nav>
             <a href="#about">About</a>
             <a href="#media">Media</a>
@@ -8,16 +18,16 @@ const components = {
             <a href="#calendar">Calendar</a>
             <a href="#contact">Booking/Contact</a>
             <a href="epk.html">EPK</a>
-        </nav>
-    `,
-    header: `
+        </nav>`;
+
+    if (headerPlaceholder) headerPlaceholder.innerHTML = `
         <header>
             <img src="images/bsLogoColorTransparent.gif" alt="Black Secrets Logo" class="imagecontainer">
             <p><img src="images/bsNameColorTransparent.png" alt="Black Secrets Name" class="imagecontainer"></p>
             <p><img src="images/ATributeToAliceInChainsEaterFontTransparant.png" alt="A Tribute to Alice in Chains" class="imagecontainer"></p>
-        </header>
-    `,
-    footer: `
+        </header>`;
+
+    if (footerPlaceholder) footerPlaceholder.innerHTML = `
         <footer>
             <table width="100%" style="border-collapse: collapse; background-color: rgba(0, 0, 0, 0.8); color: #fff;">
                 <tr>
@@ -28,17 +38,19 @@ const components = {
                     </td>
                 </tr>
             </table>
-        </footer>
-    `
-};
+        </footer>`;
 
-function insertComponent(id, html) {
-    const el = document.getElementById(id);
-    if (el) el.innerHTML = html;
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    insertComponent('nav-placeholder', components.nav);
-    insertComponent('header-placeholder', components.header);
-    insertComponent('footer-placeholder', components.footer);
+    // Render Dynamic Sections
+    if (document.getElementById('dynamic-about')) {
+        document.getElementById('dynamic-about').innerHTML = renderAbout();
+    }
+    if (document.getElementById('dynamic-media')) {
+        document.getElementById('dynamic-media').innerHTML = renderMedia();
+    }
+    if (document.getElementById('dynamic-gallery')) {
+        document.getElementById('dynamic-gallery').innerHTML = renderGallery();
+    }
+    if (document.getElementById('dynamic-calendar')) {
+        document.getElementById('dynamic-calendar').innerHTML = renderCalendar();
+    }
 });
