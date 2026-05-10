@@ -15,7 +15,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: var(--bg-color) url('images/bsBlackLogoCropped.png') center center no-repeat;
+  background: var(--bg-color) url('../images/bsBlackLogoCropped.png') center center no-repeat;
   background-size: contain;
   background-attachment: fixed;
   color: var(--text-color);
