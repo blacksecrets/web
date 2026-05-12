@@ -60,14 +60,15 @@ function initMediaPlayers() {
         const closeBtn = container.querySelector('.close-btn');
 
         thumbnail.addEventListener('click', () => {
-            // Close all other videos first
+            // Close all others first
             document.querySelectorAll('.video-container').forEach(c => {
-                c.classList.remove('active');
-                const p = c.querySelector('.video-player');
-                if (p) p.style.display = 'none';
+                if (c !== container) {
+                    c.classList.remove('active');
+                    const p = c.querySelector('.video-player');
+                    if (p) p.style.display = 'none';
+                }
             });
 
-            // Open this one
             container.classList.add('active');
             player.style.display = 'block';
         });
