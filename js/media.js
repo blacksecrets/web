@@ -20,7 +20,7 @@ const mediaItems = [
     },
     {
         title: "Man in the Box (Studio Recording)",
-        url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2013239755&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+        url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2013239755&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
         thumbnail: "images/manInTheBoxLogo.png"
     }
 ];
@@ -32,9 +32,15 @@ function renderMedia() {
         html += `
             <div class="media-item">
                 <div class="video-container">
-                    <img src="${item.thumbnail}" alt="${item.title}" class="thumbnail">
+                    <img src="${item.thumbnail}" 
+											alt="${item.title}"
+											loading="lazy"
+											class="thumbnail">
                     <div class="video-player">
-                        <iframe src="${item.url}" frameborder="0" allowfullscreen></iframe>
+                        <iframe src="${item.url}"
+													frameborder="0"
+													allowfullscreen>
+												</iframe>
                     </div>
                     <button class="close-btn">Close</button>
                 </div>

@@ -81,6 +81,7 @@ function renderGallery() {
         html += `
             <img src="${img.thumb}" 
                  alt="${img.alt}" 
+								loading="lazy"
                  onclick="openModal('${modalId}')">
         `;
     });

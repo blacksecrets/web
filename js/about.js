@@ -31,7 +31,11 @@ function renderAbout() {
     aboutContent.members.forEach(m => {
         html += `
             <div class="member-item">
-                <img src="${m.image}" alt="${m.name}" class="stockimage" onclick="openModalFromSrc('${m.image}')">
+                <img src="${m.image}"
+									alt="${m.name}"
+									class="stockimage" 
+									loading="lazy" 
+									onclick="openModalFromSrc('${m.image}')">
                 <strong>${m.name}</strong><br>
                 ${m.role}
             </div>`;
