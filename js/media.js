@@ -60,6 +60,14 @@ function initMediaPlayers() {
         const closeBtn = container.querySelector('.close-btn');
 
         thumbnail.addEventListener('click', () => {
+            // Close all other videos first
+            document.querySelectorAll('.video-container').forEach(c => {
+                c.classList.remove('active');
+                const p = c.querySelector('.video-player');
+                if (p) p.style.display = 'none';
+            });
+
+            // Open this one
             container.classList.add('active');
             player.style.display = 'block';
         });
@@ -79,4 +87,20 @@ document.addEventListener('DOMContentLoaded', () => {
         mediaContainer.innerHTML = renderMedia();
         setTimeout(initMediaPlayers, 150);   // Small delay to ensure DOM is ready
     }
+});
+
+// Stop all other videos when one starts
+function stopAllVideos() {
+    document.querySelectorAll('.video-container').forEach(container => {
+        container.classList.remove('active');
+        const player = container.querySelector('.video-player');
+        if (player) player.style.display = 'none';
+    });
+}
+
+// Modify the click handler in initMediaPlayers():
+thumbnail.addEventListener('click', () => {
+    stopAllVideos();                    // Stop others first
+    container.classList.add('active');
+    player.style.display = 'block';
 });
