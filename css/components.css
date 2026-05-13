@@ -63,9 +63,6 @@
     text-shadow: 0 0 10px black;
 }
 
-
-
-
 /* ==================== DYNAMIC CALENDAR ==================== */
 .events-grid {
     display: grid !important;
@@ -268,7 +265,6 @@
 }
 
 /* ==================== MEDIA GRID LAYOUT ==================== */
-/* ==================== MEDIA SECTION - CLOSE BUTTON BELOW ==================== */
 .media-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
@@ -363,6 +359,7 @@
     background: #c00;
     transform: scale(1.1);
 }
+
 /* ==================== MEDIA MODAL - Mobile Friendly ==================== */
 .media-modal {
     display: none;
