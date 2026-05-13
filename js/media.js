@@ -1,5 +1,5 @@
 // =============================================
-// MEDIA SECTION - Clean version with top-right X only
+// MEDIA SECTION - Full-width Overlay Modal
 // =============================================
 
 const mediaItems = [
@@ -36,89 +36,96 @@ function renderMedia() {
                          alt="${item.title}"
                          loading="lazy"
                          class="thumbnail">
-                    <div class="video-player" style="display: none;">
-                        <iframe src="${item.url}"
-                                frameborder="0"
-                                allowfullscreen
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
-                        </iframe>
-                    </div>
-                    <!-- Top-right X close button -->
-                    <button class="close-top" style="display: none;">✕</button>
                 </div>
                 <p class="media-title">${item.title}</p>
             </div>`;
     });
 
     html += `</div></section>`;
+    
+    // Add the global media modal (once)
+    html += `
+    <div id="media-modal" class="media-modal">
+        <div class="media-modal-content">
+            <button id="modal-close" class="modal-close">✕</button>
+            <div id="modal-player" class="modal-player"></div>
+            <p id="modal-title" class="modal-title"></p>
+        </div>
+    </div>`;
+    
     return html;
 }
 
-// Pause media properly
-function pauseMedia(container) {
-    const iframe = container.querySelector('iframe');
-    const playerDiv = container.querySelector('.video-player');
-    const closeBtn = container.querySelector('.close-top');
-
-    if (!iframe) return;
-
-    // Pause YouTube
-    if (iframe.src.includes('youtube.com')) {
-        try {
-            iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-        } catch (e) {}
+// Pause and close the modal
+function closeMediaModal() {
+    const modal = document.getElementById('media-modal');
+    const playerContainer = document.getElementById('modal-player');
+    
+    // Pause media
+    const iframe = playerContainer.querySelector('iframe');
+    if (iframe) {
+        if (iframe.src.includes('youtube.com')) {
+            try {
+                iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+            } catch (e) {}
+        }
+        if (iframe.src.includes('soundcloud.com')) {
+            try {
+                iframe.contentWindow.postMessage({ method: 'pause' }, '*');
+            } catch (e) {}
+        }
+        
+        // Full stop
+        const src = iframe.src;
+        iframe.src = '';
+        setTimeout(() => { iframe.src = src; }, 50);
     }
     
-    // Pause SoundCloud
-    if (iframe.src.includes('soundcloud.com')) {
-        try {
-            iframe.contentWindow.postMessage({ method: 'pause' }, '*');
-        } catch (e) {}
-    }
-
-    // Full stop fallback
-    const currentSrc = iframe.src;
-    iframe.src = '';
-    setTimeout(() => { iframe.src = currentSrc; }, 10);
-
-    // Hide player and close button
-    playerDiv.style.display = 'none';
-    if (closeBtn) closeBtn.style.display = 'none';
-    container.classList.remove('active');
+    modal.style.display = 'none';
+    playerContainer.innerHTML = '';
 }
 
-// Initialize click handlers
+// Initialize
 function initMediaPlayers() {
+    const modal = document.getElementById('media-modal');
+    const modalPlayer = document.getElementById('modal-player');
+    const modalTitle = document.getElementById('modal-title');
+    const modalClose = document.getElementById('modal-close');
+
+    // Close button
+    modalClose.addEventListener('click', closeMediaModal);
+
+    // Click outside content to close
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeMediaModal();
+    });
+
+    // Thumbnail clicks
     document.querySelectorAll('.media-item').forEach(item => {
-        const container = item.querySelector('.video-container');
-        const thumbnail = container.querySelector('.thumbnail');
-        const playerDiv = container.querySelector('.video-player');
-        const closeBtn = container.querySelector('.close-top');
+        const thumbnail = item.querySelector('.thumbnail');
+        const index = parseInt(item.dataset.index);
+        const itemData = mediaItems[index];
 
-        // Click thumbnail to open
         thumbnail.addEventListener('click', () => {
-            // Close all others
-            document.querySelectorAll('.video-container').forEach(other => {
-                if (other !== container) pauseMedia(other);
-            });
-
-            // Open this one
-            container.classList.add('active');
-            playerDiv.style.display = 'block';
-            if (closeBtn) closeBtn.style.display = 'block';
+            // Set title
+            modalTitle.textContent = itemData.title;
+            
+            // Create player
+            modalPlayer.innerHTML = `
+                <div class="modal-video-wrapper">
+                    <iframe src="${itemData.url}" 
+                            frameborder="0" 
+                            allowfullscreen
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                    </iframe>
+                </div>`;
+            
+            modal.style.display = 'flex';
         });
-
-        // Close button
-        if (closeBtn) {
-            closeBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                pauseMedia(container);
-            });
-        }
     });
 }
 
-// Auto initialize
+// Auto-init
 document.addEventListener('DOMContentLoaded', () => {
     const mediaContainer = document.getElementById('dynamic-media');
     if (mediaContainer) {
@@ -126,10 +133,3 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(initMediaPlayers, 100);
     }
 });
-
-// Public helper
-window.stopAllMedia = function() {
-    document.querySelectorAll('.video-container').forEach(container => {
-        pauseMedia(container);
-    });
-};

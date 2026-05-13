@@ -364,3 +364,108 @@
     transform: scale(1.1);
 }
 
+/* ==================== MEDIA MODAL (Full-width but constrained) ==================== */
+.media-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.96);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.media-modal-content {
+    width: 100%;
+    max-width: 980px;           /* Better match to site content / background */
+    background: #111;
+    border-radius: 8px;
+    padding: 20px 20px 30px;
+    position: relative;
+    box-shadow: 0 0 40px rgba(0,0,0,0.9);
+}
+
+.modal-close {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    background: #c00;
+    color: white;
+    border: none;
+    width: 52px;
+    height: 52px;
+    font-size: 30px;
+    line-height: 1;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2010;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+}
+
+.modal-close:hover {
+    background: #ff3333;
+    transform: scale(1.08);
+}
+
+.modal-player {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 */
+    background: #000;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.modal-video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.modal-title {
+    text-align: center;
+    margin: 15px 0 0;
+    font-size: 1.35rem;
+    color: #eee;
+    font-weight: bold;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .media-modal {
+        padding: 12px;
+    }
+    
+    .media-modal-content {
+        max-width: 100%;
+        padding: 15px 12px 25px;
+        border-radius: 6px;
+    }
+    
+    .modal-close {
+        width: 44px;
+        height: 44px;
+        font-size: 26px;
+        top: -14px;
+        right: -14px;
+    }
+    
+    .modal-title {
+        font-size: 1.2rem;
+    }
+}
