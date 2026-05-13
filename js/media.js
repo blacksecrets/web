@@ -1,5 +1,5 @@
 // =============================================
-// MEDIA SECTION - DIV BASED + CLICK HANDLERS
+// MEDIA SECTION - Improved with proper pause/stop
 // =============================================
 
 const mediaItems = [
@@ -28,21 +28,22 @@ const mediaItems = [
 function renderMedia() {
     let html = `<section id="media"><h2>Media</h2><div class="media-grid">`;
 
-    mediaItems.forEach(item => {
+    mediaItems.forEach((item, index) => {
         html += `
-            <div class="media-item">
+            <div class="media-item" data-index="${index}">
                 <div class="video-container">
                     <img src="${item.thumbnail}" 
-											alt="${item.title}"
-											loading="lazy"
-											class="thumbnail">
-                    <div class="video-player">
+                         alt="${item.title}"
+                         loading="lazy"
+                         class="thumbnail">
+                    <div class="video-player" style="display: none;">
                         <iframe src="${item.url}"
-													frameborder="0"
-													allowfullscreen>
-												</iframe>
+                                frameborder="0"
+                                allowfullscreen
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                        </iframe>
                     </div>
-                    <button class="close-btn">Close</button>
+                    <button class="close-btn" style="display: none;">Close</button>
                 </div>
                 <p class="media-title">${item.title}</p>
             </div>`;
@@ -52,56 +53,93 @@ function renderMedia() {
     return html;
 }
 
+// Helper to pause a specific container's media
+function pauseMedia(container) {
+    const iframe = container.querySelector('iframe');
+    const playerDiv = container.querySelector('.video-player');
+    const closeBtn = container.querySelector('.close-btn');
+    
+    if (!iframe) return;
+
+    // YouTube pause via postMessage (most reliable)
+    if (iframe.src.includes('youtube.com')) {
+        try {
+            iframe.contentWindow.postMessage(
+                '{"event":"command","func":"pauseVideo","args":""}', 
+                '*'
+            );
+        } catch (e) {}
+    }
+    
+    // SoundCloud pause (via URL reload trick or postMessage)
+    if (iframe.src.includes('soundcloud.com')) {
+        try {
+            iframe.contentWindow.postMessage(
+                { method: 'pause' }, 
+                '*'
+            );
+        } catch (e) {}
+    }
+
+    // Fallback: reload iframe src to fully stop (resets to start)
+    const currentSrc = iframe.src;
+    iframe.src = '';
+    setTimeout(() => {
+        iframe.src = currentSrc;
+    }, 10);
+
+    // Hide UI
+    playerDiv.style.display = 'none';
+    closeBtn.style.display = 'none';
+    container.classList.remove('active');
+}
+
 // Initialize click handlers
 function initMediaPlayers() {
     document.querySelectorAll('.video-container').forEach(container => {
         const thumbnail = container.querySelector('.thumbnail');
-        const player = container.querySelector('.video-player');
+        const playerDiv = container.querySelector('.video-player');
         const closeBtn = container.querySelector('.close-btn');
+        const iframe = container.querySelector('iframe');
 
+        // Open media
         thumbnail.addEventListener('click', () => {
-            // Close all others first
-            document.querySelectorAll('.video-container').forEach(c => {
-                if (c !== container) {
-                    c.classList.remove('active');
-                    const p = c.querySelector('.video-player');
-                    if (p) p.style.display = 'none';
+            // Close/pause ALL others first
+            document.querySelectorAll('.video-container').forEach(other => {
+                if (other !== container) {
+                    pauseMedia(other);
                 }
             });
 
+            // Open this one
             container.classList.add('active');
-            player.style.display = 'block';
+            playerDiv.style.display = 'block';
+            closeBtn.style.display = 'block';
+            
+            // Optional: auto-play (YouTube/SoundCloud usually start on load)
         });
 
+        // Close button
         closeBtn.addEventListener('click', (e) => {
             e.stopPropagation();
-            container.classList.remove('active');
-            player.style.display = 'none';
+            pauseMedia(container);
         });
     });
 }
 
-// Auto-init when media is rendered
+// Auto-init
 document.addEventListener('DOMContentLoaded', () => {
     const mediaContainer = document.getElementById('dynamic-media');
     if (mediaContainer) {
         mediaContainer.innerHTML = renderMedia();
-        setTimeout(initMediaPlayers, 150);   // Small delay to ensure DOM is ready
+        // Small delay for DOM elements
+        setTimeout(initMediaPlayers, 100);
     }
 });
 
-// Stop all other videos when one starts
-function stopAllVideos() {
+// Public function to stop everything (useful elsewhere)
+window.stopAllMedia = function() {
     document.querySelectorAll('.video-container').forEach(container => {
-        container.classList.remove('active');
-        const player = container.querySelector('.video-player');
-        if (player) player.style.display = 'none';
+        pauseMedia(container);
     });
-}
-
-// Modify the click handler in initMediaPlayers():
-thumbnail.addEventListener('click', () => {
-    stopAllVideos();                    // Stop others first
-    container.classList.add('active');
-    player.style.display = 'block';
-});
+};
