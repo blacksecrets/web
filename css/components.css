@@ -480,3 +480,58 @@
         padding: 10px 10px 18px;
     }
 }
+
+/* ==================== CALENDAR FLYER MODAL ==================== */
+.calendar-modal .modal-image-container {
+    max-height: 85vh;
+    overflow-y: auto;
+    border-radius: 6px;
+}
+
+.calendar-modal .modal-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+/* Calendar Event Tile */
+.event-tile {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 380px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.tile-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    color: white;
+    padding: 20px 15px 15px;
+    text-align: left;
+}
+
+.flyer-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #c00;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.flyer-btn:hover {
+    background: #ff3333;
+    transform: scale(1.05);
+}
