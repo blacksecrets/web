@@ -34,16 +34,6 @@ const gigs = [
         extra: ""
     },
     {
-        date: "Friday, October 3, 2026",
-        time: "Time-TBD",
-        title: "Black Secrets Live at Taylor Pavillion",
-        venue: "Taylor Pavillion",
-        address: "119 North Loudoun Street,<br>Winchester, VA",
-        detailsUrl: "https://wheresthemusic.us/venue/taylor-pavilion/",
-        flyerMain: "flyers/20261003FirstFridayFlyer.jpg",
-        extra: "Presented by <strong><a href='https://friendsofoldtown.org/' target='_blank'>Friends of Old Town</a></strong>"
-    },
-    {
         date: "Friday, July 10, 2026",
         time: "7pm",
         title: "Black Secrets Live at The Tally Ho Theater",
@@ -52,6 +42,16 @@ const gigs = [
         detailsUrl: "https://www.ticketweb.com/event/-schism-a-tribute-to-tally-ho-theater-tickets/14850233?pl=tallyho",
         flyerMain: "flyers/20260710TallyHo.png",
         extra: "With: <strong>SCHISM</strong>"
+    },
+    {
+        date: "Friday, October 3, 2026",
+        time: "Time-TBD",
+        title: "Black Secrets Live at Taylor Pavillion",
+        venue: "Taylor Pavillion",
+        address: "119 North Loudoun Street,<br>Winchester, VA",
+        detailsUrl: "https://wheresthemusic.us/venue/taylor-pavilion/",
+        flyerMain: "flyers/20261003FirstFridayFlyer.jpg",
+        extra: "Presented by <strong><a href='https://friendsofoldtown.org/' target='_blank'>Friends of Old Town</a></strong>"
     }
     // Add new gigs above this line
 ];

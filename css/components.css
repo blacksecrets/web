@@ -109,9 +109,10 @@
 #dynamic-about,
 #about {
     text-align: left;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
+    //width: 100% !important;
+    //max-width: 1000px;
+    //margin: 0 auto;
+    //padding: 0 20px;
 }
 
 /* Member photos container */
