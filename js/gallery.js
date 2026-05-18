@@ -105,7 +105,7 @@ function renderGallery() {
 // Global functions for onclick handlers
 window.openModal = function(modalId) {
     const modal = document.getElementById(modalId);
-    if (modal) modal.style.display = "block";
+    if (modal) modal.style.display = "flex";
 };
 
 window.closeModal = function(modalId) {
