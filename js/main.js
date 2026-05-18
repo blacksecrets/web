@@ -61,3 +61,36 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('dynamic-calendar').innerHTML = renderCalendar();
     }
 });
+
+// =============================================
+// GLOBAL ESC KEY SUPPORT - ALL SECTIONS
+// =============================================
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === "Escape" || e.key === "Esc") {
+
+        // 1. Close Gallery + About modals
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.style.display = "none";
+        });
+
+        // 2. Close Media Modal (the important one)
+        const mediaModal = document.getElementById('media-modal');
+        if (mediaModal) {
+            mediaModal.style.display = 'none';
+
+            // Clear the player to stop audio
+            const playerContainer = document.getElementById('modal-player');
+            if (playerContainer) {
+                playerContainer.innerHTML = '';
+            }
+        }
+
+        // 3. Close any Calendar modals
+        document.querySelectorAll('.calendar-modal').forEach(modal => {
+            modal.style.display = "none";
+        });
+
+        console.log('✅ Esc key pressed - All closed');
+    }
+});
