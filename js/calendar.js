@@ -14,6 +14,16 @@ const gigs = [
         extra: "With: <strong>12 Stones, Windwalkers, Deadeyes, and MANY MORE!</strong>"
     },
     {
+        date: "Sunday, June 14, 2026",
+        time: "11am-6pm",
+        title: "Black Secrets Live at Eagle Plaza",
+        venue: "Eagle Plaza",
+        address: "3790 Hedgesville Rd<br>Hedgesville, WV 25427",
+        detailsUrl: "https://www.facebook.com/share/1BaumwVbro/?mibextid=wwXIfr",
+        flyerMain: "flyers/20260614EagleOnePlaza.jpg",
+        extra: "With: <strong>The Stares</strong> and <strong>Bobcat</strong>"
+    },
+    {
         date: "Saturday, June 27, 2026",
         time: "",
         title: "Black Secrets Live at Jammin Java",
