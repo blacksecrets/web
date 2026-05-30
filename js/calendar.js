@@ -44,16 +44,6 @@ const gigs = [
         extra: ""
     },
     {
-        date: "Friday, July 10, 2026",
-        time: "7pm",
-        title: "Black Secrets Live at The Tally Ho Theater",
-        venue: "Tally Ho Theater",
-        address: "19 W Market St,<br>Leesburg, VA 20176",
-        detailsUrl: "https://www.ticketweb.com/event/-schism-a-tribute-to-tally-ho-theater-tickets/14850233?pl=tallyho",
-        flyerMain: "flyers/20260710TallyHo.png",
-        extra: "With: <strong>SCHISM</strong>"
-    },
-    {
         date: "Friday, October 3, 2026",
         time: "Time-TBD",
         title: "Black Secrets Live at Taylor Pavillion",
