@@ -2,7 +2,7 @@
 // CALENDAR - With Flyer Modal
 // =============================================
 
-const gigs = [
+/*
     {
         date: "Saturday, June 6, 2026",
         time: "11am-11pm",
@@ -43,6 +43,8 @@ const gigs = [
         flyerMain: "flyers/20260703JimBarnettParkFlyer.jpg",
         extra: ""
     },
+*/
+const gigs = [
     {
         date: "Friday, October 3, 2026",
         time: "Time-TBD",
