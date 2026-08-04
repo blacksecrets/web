@@ -9,9 +9,9 @@ const mediaItems = [
         thumbnail: "images/BlackSecretsAiCScary.png"
     },
     {
-        title: "We Die Young (Live at Backseat)",
-        url: "https://www.youtube.com/embed/AC_vJPMMapo",
-        thumbnail: "https://img.youtube.com/vi/AC_vJPMMapo/default.jpg"
+        title: "We Die Young (Live at Jammin Java)",
+        url: "https://www.youtube.com/embed/GAZHo6ez3Os?si=YTX1NpbwFXcsBXfB",
+        thumbnail: "https://img.youtube.com/vi/GAZHo6ez3Os/default.jpg"
     },
     {
         title: "Put You Down (Live at Backseat)",
