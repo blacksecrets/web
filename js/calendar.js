@@ -54,6 +54,16 @@ const gigs = [
         detailsUrl: "https://wheresthemusic.us/venue/taylor-pavilion/",
         flyerMain: "flyers/20261003FirstFridayFlyer.jpg",
         extra: "Presented by <strong><a href='https://friendsofoldtown.org/' target='_blank'>Friends of Old Town</a></strong>"
+    },
+    {
+        date: "Saturday, October 25, 2026",
+        time: "8PM",
+        title: "Black Secrets Live at Cumberland Hunting Club",
+        venue: "Taylor Pavillion",
+        address: "31 Thomas St,<br>Cumberland, MD 21502",
+        //detailsUrl: "https://wheresthemusic.us/venue/taylor-pavilion/",
+        flyerMain: "flyers/20261024CumberlandOutdoorClub.png"
+        //extra: "Presented by <strong><a href='https://friendsofoldtown.org/' target='_blank'>Friends of Old Town</a></strong>"
     }
     // Add new gigs above this line
 ];
