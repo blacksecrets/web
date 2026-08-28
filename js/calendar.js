@@ -59,7 +59,7 @@ const gigs = [
         date: "Saturday, October 25, 2026",
         time: "8PM",
         title: "Black Secrets Live at Cumberland Hunting Club",
-        venue: "Taylor Pavillion",
+        venue: "Cumberland Hunting Club",
         address: "31 Thomas St,<br>Cumberland, MD 21502",
         //detailsUrl: "https://wheresthemusic.us/venue/taylor-pavilion/",
         flyerMain: "flyers/20261024CumberlandOutdoorClub.png"
