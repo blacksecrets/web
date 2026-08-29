@@ -41,11 +41,15 @@ document.addEventListener('DOMContentLoaded', () => {
                         <td>
                             <a href="https://www.facebook.com/61556445512513" target="_blank"><img src="images/facebookLinkImageSmall.png" alt="Facebook" class="logo"></a>
                             <a href="https://www.youtube.com/@BlackSecretsBand" target="_blank"><img src="images/youtubeLinkImageSmall.png" alt="Youtube" class="logo"></a>
+                            <a href="https://www.instagram.com/black_secrets_band" target="_blank"><img src="images/instagramLinkImageSmall.png" alt="Instagram" class="logo"></a>
+                            <a href="https://www.bandsintown.com/a/15662855" target="_blank"><img src="images/bandsintownLinkImageSmall.png" alt="Bandsintown" class="logo"></a>
+
                         </td>
                     </tr>
                 </table>
             </footer>`;
     }
+                            //<a href="https://www.instagram.com/black_secrets_band/" target="_blank"><img src="images/instagramLinkImageSmall.png" alt="instagram" class="logo"></a>
 
     // === DYNAMIC SECTIONS ===
     if (document.getElementById('dynamic-about')) {
