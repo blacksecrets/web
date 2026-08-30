@@ -489,6 +489,26 @@
     text-align: left;
 }
 
+/* Placeholder for gigs without flyer artwork yet */
+.event-tile--no-flyer {
+    background-color: #111;
+    background-image: url('../images/bsBlackLogoCropped.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 55%;
+    cursor: default;
+}
+
+.event-tile--no-flyer .tile-content {
+    background: linear-gradient(transparent, rgba(0,0,0,0.95) 40%);
+}
+
+.flyer-pending {
+    color: #999;
+    font-style: italic;
+    margin: 4px 0 0;
+}
+
 .flyer-btn,
 .tickets-btn {
     display: inline-flex;

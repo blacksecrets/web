@@ -49,6 +49,7 @@ const gigs = [
         date: "Friday, October 3, 2026",
         time: "Doors: 7PM - Show: 8PM",
         title: "Black Secrets Live at The Salisbury Center",
+        withArtists: "Attica - A Nirvana Tribute",
         venue: "The Salisbury Center",
         // Venue name links to the same place as the Tickets button.
         venueUrl: "https://www.bandsintown.com/t/108837980?app_id=8c8cfd4dd08e15fcb7d6441b48d3081d&came_from=700&ticket_id=2050999819&utm_campaign=ticket_tktpp&utm_medium=web&utm_source=widget",
@@ -84,11 +85,31 @@ const gigs = [
         venueUrl: "https://www.cumberlandoutdoorclub.com/",
         address: "31 Thomas St, Cumberland, MD 21502",
         flyerMain: "flyers/20261024CumberlandOutdoorClub.png"
+    },
+    {
+        date: "Saturday, November 28, 2026",
+        title: "Black Secrets Live at Bar XIII",
+        venue: "Bar XIII",
+        venueUrl: "https://barxiii.com/",
+        address: "1706 Philadelphia Pike, Wilmington, DE 19809",
+        withArtists: "Guerrilla Radio - A Tribute to Rage Against the Machine",
+        withArtistsUrl: "https://www.facebook.com/GuerrillaRadioBand/"
+        // time and flyerMain: TBD
+    },
+    {
+        date: "Sunday, February 14, 2027",
+        title: "Black Secrets Live at Bright Box",
+        venue: "Bright Box",
+        venueUrl: "https://brightboxwinchester.com/",
+        address: "15 N Loudoun St, Winchester, VA 22601",
+        withArtists: "Siamese Dreamers - A Tribute to The Smashing Pumpkins",
+        withArtistsUrl: "https://www.siamesedreamers.com/"
+        // time and flyerMain: TBD
     }
     // Add new gigs above this line
 ];
 
-// Every field except date, title, and flyerMain is optional.
+// Every field except date, title, venue, and address is optional.
 function googleMapsUrl(address) {
     return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
 }
@@ -100,27 +121,33 @@ function renderCalendar() {
             <div class="events-grid">
     `;
 
-    gigs.forEach(gig => {
+    gigs.forEach((gig, index) => {
+        const tileClass = gig.flyerMain ? 'event-tile' : 'event-tile event-tile--no-flyer';
+        const tileStyle = gig.flyerMain ? ` style="background-image: url('${gig.flyerMain}');"` : '';
+
         html += `
-            <div class="event-tile" style="background-image: url('${gig.flyerMain}');">
+            <div class="${tileClass}"${tileStyle}>
                 <div class="tile-content">
                     <p><strong>${gig.date}</strong></p>
-                    ${gig.time ? `<p>${gig.time}</p>` : ''}
+                    ${gig.time ? `<p>${gig.time}</p>` : '<p>Time-TBD</p>'}
                     <h3>${gig.title}</h3>
                     ${gig.presentedBy ? `<p class="presented-by">Presented by <strong>${gig.presentedByUrl ? `<a href="${gig.presentedByUrl}" target="_blank">${gig.presentedBy}</a>` : gig.presentedBy}</strong></p>` : ''}
+                    ${gig.withArtists ? `<p class="with-artists">With: <strong>${gig.withArtistsUrl ? `<a href="${gig.withArtistsUrl}" target="_blank">${gig.withArtists}</a>` : gig.withArtists}</strong></p>` : ''}
                     <p class="venue-info">
                         ${gig.venueUrl ? `<a href="${gig.venueUrl}" target="_blank">${gig.venue}</a>` : gig.venue}<br>
                         <a href="${googleMapsUrl(gig.address)}" target="_blank">${gig.address}</a>
                     </p>
+                    ${gig.flyerMain ? '' : '<p class="flyer-pending">Details coming soon</p>'}
                 </div>
-                <button class="flyer-btn">
+                ${gig.flyerMain ? `
+                <button class="flyer-btn" data-index="${index}">
                     <svg class="btn-icon" width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="2" y="2" width="12" height="12" rx="1.5" stroke="currentColor" stroke-width="1.3"/>
                         <circle cx="5.5" cy="5.5" r="1" fill="currentColor"/>
                         <path d="M2.5 11L6 7.5L8.5 10L11 7L13.5 10.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     Flyer
-                </button>
+                </button>` : ''}
                 ${gig.ticketsUrl ? `
                 <a href="${gig.ticketsUrl}" target="_blank" class="tickets-btn">
                     <svg class="btn-icon" width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -168,9 +195,9 @@ function initCalendar() {
     });
 
     // Flyer buttons
-    document.querySelectorAll('.flyer-btn').forEach((btn, index) => {
+    document.querySelectorAll('.flyer-btn').forEach((btn) => {
         btn.addEventListener('click', () => {
-            const gig = gigs[index];
+            const gig = gigs[parseInt(btn.dataset.index, 10)];
             
             modalImageContainer.innerHTML = `
                 <img src="${gig.flyerMain}"
