@@ -539,3 +539,32 @@
     transform: scale(1.05);
 }
 
+.section-subheading {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 8px;
+    margin: 30px 0 15px 0;
+}
+
+/* Bandsintown Widget - match site theme */
+.bit-widget-container,
+.bit-widget-container * {
+    font-family: var(--font-main) !important;
+}
+
+/* The RSVP button has no data-attribute for color, so it renders in
+   Bandsintown's default white/black - override to match the site's
+   red buttons used elsewhere (.flyer-btn, .modal-close). */
+.bit-rsvp {
+    background: #c00 !important;
+    border-color: #c00 !important;
+    color: #fff !important;
+}
+
+.bit-rsvp:hover {
+    background: #ff3333 !important;
+    border-color: #ff3333 !important;
+}
+
