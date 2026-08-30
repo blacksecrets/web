@@ -489,6 +489,20 @@
     text-align: left;
 }
 
+.flyer-btn,
+.tickets-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.btn-icon {
+    flex-shrink: 0;
+}
+
 .flyer-btn {
     position: absolute;
     top: 12px;
@@ -496,8 +510,6 @@
     background: #c00;
     color: white;
     border: none;
-    padding: 8px 16px;
-    border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
     z-index: 10;
@@ -505,6 +517,24 @@
 
 .flyer-btn:hover {
     background: #ff3333;
+    transform: scale(1.05);
+}
+
+.tickets-btn {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: #c00;
+    color: white;
+    font-weight: bold;
+    border-bottom: none;
+    z-index: 10;
+}
+
+.tickets-btn:hover {
+    background: #ff3333;
+    color: white;
+    border-bottom: none;
     transform: scale(1.05);
 }
 
