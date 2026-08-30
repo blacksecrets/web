@@ -73,38 +73,6 @@
     padding: 10px;
 }
 
-.event-tile {
-    background-size: cover;
-    background-position: center;
-    min-height: 320px !important;
-    border-radius: 8px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
-}
-
-.tile-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(transparent, rgba(0,0,0,0.95));
-    padding: 20px;
-    color: white;
-}
-
-.get-details-btn {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    background: #c00;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
 /* ==================== ABOUT SECTION - SIMPLE CENTERED LAYOUT ==================== */
 #dynamic-about,
 #about {
@@ -507,6 +475,7 @@
     background-size: cover;
     background-position: center;
     cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
 
 .tile-content {

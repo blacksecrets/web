@@ -49,44 +49,47 @@ const gigs = [
         date: "Friday, October 3, 2026",
         time: "Time-TBD",
         title: "Black Secrets Live at The Salisbury Center",
+        presentedBy: "Friends of Old Town",
+        presentedByUrl: "https://friendsofoldtown.org/",
         venue: "The Salisbury Center",
-        address: "119 North Loudoun Street,<br>Winchester, VA",
-        detailsUrl: "https://wheresthemusic.us/venue/taylor-pavilion/",
-        flyerMain: "flyers/20260903SalisburyCenterFlyer.png",
-        extra: "Presented by <strong><a href='https://friendsofoldtown.org/' target='_blank'>Friends of Old Town</a></strong>"
+        venueUrl: "https://wheresthemusic.us/venue/taylor-pavilion/",
+        address: "119 North Loudoun Street, Winchester, VA",
+        flyerMain: "flyers/20260903SalisburyCenterFlyer.png"
     },
     {
         date: "Friday, October 5, 2026",
-        time: "8OM",
-        title: "Black Secrets Live at Blue Fox ",
+        time: "8PM",
+        title: "Black Secrets Live at Blue Fox",
         venue: "Blue Fox Billiards Bar & Grill",
-        address: ",<br>Winchester, VA",
-        //detailsUrl: "https://wheresthemusic.us/venue/taylor-pavilion/",
-        flyerMain: "flyers/20260905BlueFox_Flyer.png",
-        //extra: "Presented by <strong><a href='https://friendsofoldtown.org/' target='_blank'>Friends of Old Town</a></strong>"
+        address: "1160 Millwood Pike, Winchester, VA 22602",
+        flyerMain: "flyers/20260905BlueFox_Flyer.png"
     },
     {
         date: "Friday, October 2, 2026",
         time: "Time-TBD",
         title: "Black Secrets Live at Taylor Pavillion",
+        presentedBy: "Friends of Old Town",
+        presentedByUrl: "https://friendsofoldtown.org/",
         venue: "Taylor Pavillion",
-        address: "119 North Loudoun Street,<br>Winchester, VA",
-        detailsUrl: "https://wheresthemusic.us/venue/taylor-pavilion/",
-        flyerMain: "flyers/20261003FirstFridayFlyer-2.png",
-        extra: "Presented by <strong><a href='https://friendsofoldtown.org/' target='_blank'>Friends of Old Town</a></strong>"
+        venueUrl: "https://wheresthemusic.us/venue/taylor-pavilion/",
+        address: "119 North Loudoun Street, Winchester, VA",
+        flyerMain: "flyers/20261003FirstFridayFlyer-2.png"
     },
     {
         date: "Saturday, October 25, 2026",
         time: "8PM",
         title: "Black Secrets Live at Cumberland Hunting Club",
         venue: "Cumberland Hunting Club",
-        address: "31 Thomas St,<br>Cumberland, MD 21502",
-        //detailsUrl: "https://wheresthemusic.us/venue/taylor-pavilion/",
+        address: "31 Thomas St, Cumberland, MD 21502",
         flyerMain: "flyers/20261024CumberlandOutdoorClub.png"
-        //extra: "Presented by <strong><a href='https://friendsofoldtown.org/' target='_blank'>Friends of Old Town</a></strong>"
     }
     // Add new gigs above this line
 ];
+
+// Every field except date, title, and flyerMain is optional.
+function googleMapsUrl(address) {
+    return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+}
 
 function renderCalendar() {
     let html = `
@@ -102,8 +105,11 @@ function renderCalendar() {
                     <p><strong>${gig.date}</strong></p>
                     ${gig.time ? `<p>${gig.time}</p>` : ''}
                     <h3>${gig.title}</h3>
-                    ${gig.extra ? `<br>${gig.extra}<br>` : ''}
-                    <a href="${gig.detailsUrl}" target="_blank">${gig.venue}<br>${gig.address}</a>
+                    ${gig.presentedBy ? `<p class="presented-by">Presented by <strong>${gig.presentedByUrl ? `<a href="${gig.presentedByUrl}" target="_blank">${gig.presentedBy}</a>` : gig.presentedBy}</strong></p>` : ''}
+                    <p class="venue-info">
+                        ${gig.venueUrl ? `<a href="${gig.venueUrl}" target="_blank">${gig.venue}</a>` : gig.venue}<br>
+                        <a href="${googleMapsUrl(gig.address)}" target="_blank">${gig.address}</a>
+                    </p>
                 </div>
                 <button class="flyer-btn">Flyer</button>
             </div>
