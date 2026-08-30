@@ -35,18 +35,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (footerPlaceholder) {
         footerPlaceholder.innerHTML = `
             <footer>
-                <table width="100%" style="border-collapse: collapse; background-color: rgba(0, 0, 0, 0.8); color: #fff;">
-                    <tr>
-                        <td>&copy; 2025 Black Secrets. All rights reserved.</td>
-                        <td>
-                            <a href="https://www.facebook.com/61556445512513" target="_blank"><img src="images/facebookLinkImageSmall.png" alt="Facebook" class="logo"></a>
-                            <a href="https://www.youtube.com/@BlackSecretsBand" target="_blank"><img src="images/youtubeLinkImageSmall.png" alt="Youtube" class="logo"></a>
-                            <a href="https://www.instagram.com/black_secrets_band" target="_blank"><img src="images/instagramLinkImageSmall.png" alt="Instagram" class="logo"></a>
-                            <a href="https://www.bandsintown.com/a/15662855" target="_blank"><img src="images/bandsintownLinkImageSmall.png" alt="Bandsintown" class="logo"></a>
-
-                        </td>
-                    </tr>
-                </table>
+                <div class="footer-inner">
+                    <p class="footer-copyright">&copy; 2025 Black Secrets. All rights reserved.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/61556445512513" target="_blank" aria-label="Facebook"><img src="images/facebookLinkImageSmall.png" alt="Facebook" class="social-icon"></a>
+                        <a href="https://www.youtube.com/@BlackSecretsBand" target="_blank" aria-label="YouTube"><img src="images/youtubeLinkImageSmall.png" alt="Youtube" class="social-icon"></a>
+                        <a href="https://www.instagram.com/black_secrets_band" target="_blank" aria-label="Instagram"><img src="images/instagramLinkImageSmall.png" alt="Instagram" class="social-icon"></a>
+                        <a href="https://www.bandsintown.com/a/15662855" target="_blank" aria-label="Bandsintown"><img src="images/bandsintownLinkImageSmall.png" alt="Bandsintown" class="social-icon"></a>
+                    </div>
+                </div>
             </footer>`;
     }
                             //<a href="https://www.instagram.com/black_secrets_band/" target="_blank"><img src="images/instagramLinkImageSmall.png" alt="instagram" class="logo"></a>
