@@ -170,10 +170,6 @@ function renderCalendar() {
         </div>
     </div>`;
 
-    html += `
-    <div id="calendar-modal" class="media-modal calendar-modal">
-    </div>`;
-
     return html;
 }
 
@@ -202,9 +198,9 @@ function initCalendar() {
             const gig = gigs[index];
             
             modalImageContainer.innerHTML = `
-                <img src="${gig.flyerMain}" 
-                     alt="${gig.title} Flyer" 
-                     style="width:100%; height:auto; border-radius:6px; display:block;">
+                <img src="${gig.flyerMain}"
+                     alt="${gig.title} Flyer"
+                     style="border-radius:6px;">
             `;
             
             modal.style.display = 'flex';
