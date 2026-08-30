@@ -46,6 +46,15 @@ nav a:hover {
     color: var(--accent-color);
 }
 
+/* ==================== HEADER SOCIAL ICONS ==================== */
+.header-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin: 20px auto 0;
+}
+
 /* ==================== FOOTER ==================== */
 footer {
     text-align: left;

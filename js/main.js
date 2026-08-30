@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // === SHARED COMPONENTS ===
     const navPlaceholder = document.getElementById('nav-placeholder');
+    const headerSocialPlaceholder = document.getElementById('header-social-placeholder');
     const headerPlaceholder = document.getElementById('header-placeholder');
     const footerPlaceholder = document.getElementById('footer-placeholder');
 
@@ -21,6 +22,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 <a href="#contact">Booking/Contact</a>
                 <a href="epk.html">EPK</a>
             </nav>`;
+    }
+
+    if (headerSocialPlaceholder) {
+        headerSocialPlaceholder.innerHTML = `
+            <div class="header-social">
+                <a href="https://www.facebook.com/61556445512513" target="_blank" aria-label="Facebook"><img src="images/facebookLinkImageSmall.png" alt="Facebook" class="social-icon"></a>
+                <a href="https://www.youtube.com/@BlackSecretsBand" target="_blank" aria-label="YouTube"><img src="images/youtubeLinkImageSmall.png" alt="Youtube" class="social-icon"></a>
+                <a href="https://www.instagram.com/black_secrets_band" target="_blank" aria-label="Instagram"><img src="images/instagramLinkImageSmall.png" alt="Instagram" class="social-icon"></a>
+                <a href="https://www.bandsintown.com/a/15662855" target="_blank" aria-label="Bandsintown"><img src="images/bandsintownLinkImageSmall.png" alt="Bandsintown" class="social-icon"></a>
+            </div>`;
     }
 
     if (headerPlaceholder) {
