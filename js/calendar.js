@@ -48,11 +48,31 @@ const gigs = [
     {
         date: "Friday, October 3, 2026",
         time: "Time-TBD",
+        title: "Black Secrets Live at The Salisbury Center",
+        venue: "The Salisbury Center",
+        address: "119 North Loudoun Street,<br>Winchester, VA",
+        detailsUrl: "https://wheresthemusic.us/venue/taylor-pavilion/",
+        flyerMain: "flyers/20260903SalisburyCenterFlyer.png",
+        extra: "Presented by <strong><a href='https://friendsofoldtown.org/' target='_blank'>Friends of Old Town</a></strong>"
+    },
+    {
+        date: "Friday, October 5, 2026",
+        time: "8OM",
+        title: "Black Secrets Live at Blue Fox ",
+        venue: "Blue Fox Billiards Bar & Grill",
+        address: ",<br>Winchester, VA",
+        //detailsUrl: "https://wheresthemusic.us/venue/taylor-pavilion/",
+        flyerMain: "flyers/20260905BlueFox_Flyer.png",
+        //extra: "Presented by <strong><a href='https://friendsofoldtown.org/' target='_blank'>Friends of Old Town</a></strong>"
+    },
+    {
+        date: "Friday, October 2, 2026",
+        time: "Time-TBD",
         title: "Black Secrets Live at Taylor Pavillion",
         venue: "Taylor Pavillion",
         address: "119 North Loudoun Street,<br>Winchester, VA",
         detailsUrl: "https://wheresthemusic.us/venue/taylor-pavilion/",
-        flyerMain: "flyers/20261003FirstFridayFlyer.jpg",
+        flyerMain: "flyers/20261003FirstFridayFlyer-2.png",
         extra: "Presented by <strong><a href='https://friendsofoldtown.org/' target='_blank'>Friends of Old Town</a></strong>"
     },
     {
