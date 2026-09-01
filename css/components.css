@@ -558,6 +558,22 @@
     transform: scale(1.05);
 }
 
+.free-admission-badge {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    display: inline-flex;
+    align-items: center;
+    padding: 9px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.65);
+    border: 1px solid #c00;
+    color: white;
+    z-index: 10;
+}
+
 .section-subheading {
     font-size: 18px;
     font-weight: 700;
