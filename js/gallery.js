@@ -2,67 +2,84 @@
 // GALLERY DATA - Easy to maintain
 // =============================================
 
+// `id` is a permanent slug, independent of thumb/full/alt - the crew
+// dashboard's editor looks an image up by this, not by any of its other
+// fields (same reasoning as the id field on gigs in calendar.js and
+// media items in media.js).
 const galleryImages = [
     {
+        id: "backseat2025-3",
         thumb: "images/gallery/thumbs/Backseat2025 (3) thumb.jpg",
         full:  "images/gallery/Backseat2025 (3).jpg",
         alt:   "Backseat 2025"
     },
     {
+        id: "backseat2025-4",
         thumb: "images/gallery/thumbs/Backseat2025 (4) thumb.jpg",
         full:  "images/gallery/Backseat2025 (4).jpg",
         alt:   "Backseat 2025"
     },
     {
+        id: "backseat2025-8",
         thumb: "images/gallery/thumbs/Backseat2025 (8) thumb.jpg",
         full:  "images/gallery/Backseat2025 (8).jpg",
         alt:   "Backseat 2025"
     },
     {
+        id: "backseat2025-1",
         thumb: "images/gallery/thumbs/Backseat2025 (1) thumb.jpg",
         full:  "images/gallery/Backseat2025 (1).jpg",
         alt:   "Backseat 2025"
     },
     {
+        id: "backseat2024-2",
         thumb: "images/gallery/thumbs/Backseat2024 (2) thumb.jpg",
         full:  "images/gallery/Backseat2024 (2).jpg",
         alt:   "Backseat 2024"
     },
     {
+        id: "backseat2024-3",
         thumb: "images/gallery/thumbs/Backseat2024 (3) thumb.jpg",
         full:  "images/gallery/Backseat2024 (3).jpg",
         alt:   "Backseat 2024"
     },
     {
+        id: "backseat2024-4",
         thumb: "images/gallery/thumbs/Backseat2024 (4) thumb.jpg",
         full:  "images/gallery/Backseat2024 (4).jpg",
         alt:   "Backseat 2024"
     },
     {
+        id: "backseat2024-5",
         thumb: "images/gallery/thumbs/Backseat2024 (5) thumb.jpg",
         full:  "images/gallery/Backseat2024 (5).jpg",
         alt:   "Backseat 2024"
     },
     {
+        id: "backseat2025-21",
         thumb: "images/gallery/thumbs/Backseat2025 (21) thumb.jpg",
         full:  "images/gallery/Backseat2025 (21).jpg",
         alt:   "Backseat 2025"
     },
     {
+        id: "backseat2025-22",
         thumb: "images/gallery/thumbs/Backseat2025 (22) thumb.jpg",
         full:  "images/gallery/Backseat2025 (22).jpg",
         alt:   "Backseat 2025"
     },
     {
+        id: "laurenpix-15",
         thumb: "images/gallery/thumbs/LaurenPix (15) thumb.jpg",
         full:  "images/gallery/LaurenPix (15).jpg",
         alt:   "LaurenPix"
     },
     {
+        id: "laurenpix-28",
         thumb: "images/gallery/thumbs/LaurenPix (28) thumb.jpg",
         full:  "images/gallery/LaurenPix (28).jpg",
         alt:   "LaurenPix"
     }
+    // Add new gallery images above this line
 ];
 
 // =============================================
