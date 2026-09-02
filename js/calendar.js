@@ -46,6 +46,7 @@
 */
 const gigs = [
     {
+        id: "salisbury-center-2026-10-03",
         date: "Friday, October 3, 2026",
         time: "Doors: 7PM - Show: 8PM",
         title: "Black Secrets Live at The Salisbury Center",
@@ -58,6 +59,7 @@ const gigs = [
         ticketsUrl: "https://www.bandsintown.com/t/108837980?app_id=8c8cfd4dd08e15fcb7d6441b48d3081d&came_from=700&ticket_id=2050999819&utm_campaign=ticket_tktpp&utm_medium=web&utm_source=widget"
     },
     {
+        id: "blue-fox-2026-10-05",
         date: "Friday, October 5, 2026",
         time: "Time: 8PM",
         title: "Black Secrets Live at Blue Fox",
@@ -70,6 +72,7 @@ const gigs = [
         ticketMode: "custom"
     },
     {
+        id: "taylor-pavilion-2026-10-02",
         date: "Friday, October 2, 2026",
         time: "Time-TBD",
         title: "Black Secrets Live at Taylor Pavilion",
@@ -82,6 +85,7 @@ const gigs = [
         ticketMode: "free"
     },
     {
+        id: "cumberland-outdoor-club-2026-10-25",
         date: "Saturday, October 25, 2026",
         time: "Time: 8PM",
         title: "Black Secrets Live at Cumberland Outdoor Club",
@@ -91,6 +95,7 @@ const gigs = [
         flyerMain: "flyers/20261024CumberlandOutdoorClub.png"
     },
     {
+        id: "bar-xiii-2026-11-28",
         date: "Saturday, November 28, 2026",
         title: "Black Secrets Live at Bar XIII",
         venue: "Bar XIII",
@@ -101,6 +106,7 @@ const gigs = [
         // time and flyerMain: TBD
     },
     {
+        id: "bright-box-2027-02-14",
         date: "Sunday, February 14, 2027",
         title: "Black Secrets Live at Bright Box",
         venue: "Bright Box",
@@ -113,7 +119,13 @@ const gigs = [
     // Add new gigs above this line
 ];
 
-// Every field except date, title, venue, and address is optional.
+// Every field except date, title, venue, and address is optional - `id`
+// too, technically, but every gig should get one: a short, permanent
+// slug (venue-date, e.g. "blue-fox-2026-10-05") that never changes even
+// if the title/venue text gets corrected later. The crew dashboard's
+// editor looks a gig up by this id, not by its title, specifically so
+// fixing a typo in the title or venue can't break the lookup that finds
+// the entry to fix in the first place.
 function googleMapsUrl(address) {
     return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
 }
