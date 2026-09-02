@@ -65,7 +65,9 @@ const gigs = [
         venueUrl: "https://bluefoxbilliards.com/",
         address: "1160 Millwood Pike, Winchester, VA 22602",
         flyerMain: "flyers/20260905BlueFox_Flyer.png",
-        freeAdmission: false
+        freeAdmission: false,
+        customTicketsText: "$5 door cover",
+        ticketMode: "custom"
     },
     {
         date: "Friday, October 2, 2026",
