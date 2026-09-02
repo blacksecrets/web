@@ -558,7 +558,7 @@
     transform: scale(1.05);
 }
 
-.free-admission-badge {
+.ticket-info-badge {
     position: absolute;
     bottom: 12px;
     right: 12px;

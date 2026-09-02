@@ -118,6 +118,29 @@ function googleMapsUrl(address) {
     return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
 }
 
+// A gig has at most one of: a real Tickets link, a Free Admission badge,
+// or a custom-text badge ("$5 Door Cover") - `ticketMode` says which,
+// explicitly, so switching between them never depends on which of
+// ticketsUrl/freeAdmission/customTicketsText happens to still hold an old
+// value; those stay as untouched reference data no matter which mode is
+// active. Gigs from before ticketMode existed fall back to the old
+// freeAdmission-then-customTicketsText-then-ticketsUrl priority.
+function ticketDisplay(gig) {
+    const mode = gig.ticketMode || (gig.freeAdmission ? 'free' : (gig.customTicketsText ? 'custom' : 'url'));
+    if (mode === 'free') return '<span class="ticket-info-badge">Free Admission</span>';
+    if (mode === 'custom' && gig.customTicketsText) return `<span class="ticket-info-badge">${gig.customTicketsText}</span>`;
+    if (gig.ticketsUrl) {
+        return `
+                <a href="${gig.ticketsUrl}" target="_blank" class="tickets-btn">
+                    <svg class="btn-icon" width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.33333 4C2.59792 4 2 4.59792 2 5.33333V6.66667C2 6.85 2.15417 6.99375 2.32708 7.05417C2.71875 7.18958 3 7.5625 3 8C3 8.4375 2.71875 8.81042 2.32708 8.94583C2.15417 9.00625 2 9.15 2 9.33333V10.6667C2 11.4021 2.59792 12 3.33333 12H12.6667C13.4021 12 14 11.4021 14 10.6667V9.33333C14 9.15 13.8458 9.00625 13.6729 8.94583C13.2812 8.81042 13 8.4375 13 8C13 7.5625 13.2812 7.18958 13.6729 7.05417C13.8458 6.99375 14 6.85 14 6.66667V5.33333C14 4.59792 13.4021 4 12.6667 4H3.33333ZM10.6667 9.66667V6.33333H5.33333V9.66667H10.6667ZM4.33333 6C4.33333 5.63125 4.63125 5.33333 5 5.33333H11C11.3688 5.33333 11.6667 5.63125 11.6667 6V10C11.6667 10.3688 11.3688 10.6667 11 10.6667H5C4.63125 10.6667 4.33333 10.3688 4.33333 10V6Z" fill="currentColor"/>
+                    </svg>
+                    Tickets
+                </a>`;
+    }
+    return '';
+}
+
 function renderCalendar() {
     let html = `
         <section id="calendar">
@@ -152,14 +175,7 @@ function renderCalendar() {
                     </svg>
                     Flyer
                 </button>` : ''}
-                ${gig.freeAdmission ? `
-                <span class="free-admission-badge">Free Admission</span>` : gig.ticketsUrl ? `
-                <a href="${gig.ticketsUrl}" target="_blank" class="tickets-btn">
-                    <svg class="btn-icon" width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3.33333 4C2.59792 4 2 4.59792 2 5.33333V6.66667C2 6.85 2.15417 6.99375 2.32708 7.05417C2.71875 7.18958 3 7.5625 3 8C3 8.4375 2.71875 8.81042 2.32708 8.94583C2.15417 9.00625 2 9.15 2 9.33333V10.6667C2 11.4021 2.59792 12 3.33333 12H12.6667C13.4021 12 14 11.4021 14 10.6667V9.33333C14 9.15 13.8458 9.00625 13.6729 8.94583C13.2812 8.81042 13 8.4375 13 8C13 7.5625 13.2812 7.18958 13.6729 7.05417C13.8458 6.99375 14 6.85 14 6.66667V5.33333C14 4.59792 13.4021 4 12.6667 4H3.33333ZM10.6667 9.66667V6.33333H5.33333V9.66667H10.6667ZM4.33333 6C4.33333 5.63125 4.63125 5.33333 5 5.33333H11C11.3688 5.33333 11.6667 5.63125 11.6667 6V10C11.6667 10.3688 11.3688 10.6667 11 10.6667H5C4.63125 10.6667 4.33333 10.3688 4.33333 10V6Z" fill="currentColor"/>
-                    </svg>
-                    Tickets
-                </a>` : ''}
+                ${ticketDisplay(gig)}
             </div>
         `;
     });
