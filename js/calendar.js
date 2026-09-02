@@ -78,7 +78,8 @@ const gigs = [
         venue: "Taylor Pavillion",
         venueUrl: "https://wheresthemusic.us/venue/taylor-pavilion/",
         address: "119 North Loudoun Street, Winchester, VA",
-        flyerMain: "flyers/20261003FirstFridayFlyer-2.png"
+        flyerMain: "flyers/20261003FirstFridayFlyer-2.png",
+        ticketMode: "free"
     },
     {
         date: "Saturday, October 25, 2026",
