@@ -69,7 +69,8 @@ const gigs = [
         flyerMain: "flyers/20260905BlueFox_Flyer.png",
         freeAdmission: false,
         customTicketsText: "$5 door cover",
-        ticketMode: "custom"
+        ticketMode: "custom",
+        withArtists: "BLISS"
     },
     {
         id: "taylor-pavilion-2026-10-02",
