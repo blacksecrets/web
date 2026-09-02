@@ -2,27 +2,36 @@
 // MEDIA SECTION - Full-width Overlay Modal
 // =============================================
 
+// `id` is a permanent slug, independent of title/url/thumbnail - the
+// crew dashboard's editor looks an item up by this, not by title, so
+// correcting a title later can't break the lookup that finds the entry
+// to fix (same reasoning as the id field on gigs in calendar.js).
 const mediaItems = [
     {
+        id: "black-secrets-promotional-video",
         title: "Black Secrets Promotional Video",
         url: "https://www.youtube.com/embed/6TEQYge02fU",
         thumbnail: "images/BlackSecretsAiCScary.png"
     },
     {
+        id: "we-die-young-live-jammin-java",
         title: "We Die Young (Live at Jammin Java)",
         url: "https://www.youtube.com/embed/GAZHo6ez3Os?si=YTX1NpbwFXcsBXfB",
         thumbnail: "https://img.youtube.com/vi/GAZHo6ez3Os/default.jpg"
     },
     {
+        id: "put-you-down-live-backseat",
         title: "Put You Down (Live at Backseat)",
         url: "https://www.youtube.com/embed/ZOVBvhXhMpg",
         thumbnail: "https://img.youtube.com/vi/ZOVBvhXhMpg/default.jpg"
     },
     {
+        id: "man-in-the-box-studio",
         title: "Man in the Box (Studio Recording)",
         url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2013239755&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
         thumbnail: "images/manInTheBoxLogo.png"
     }
+    // Add new media items above this line
 ];
 
 function renderMedia() {
