@@ -75,7 +75,7 @@ const gigs = [
         id: "taylor-pavilion-2026-10-02",
         date: "Friday, October 2, 2026",
         time: "Time-TBD",
-        title: "Black Secrets Live at Taylor Pavilion",
+        title: "Black Secrets Live at Taylor Pavilion!",
         presentedBy: "Friends of Old Town",
         presentedByUrl: "https://friendsofoldtown.org/",
         venue: "Taylor Pavilion",
