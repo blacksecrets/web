@@ -78,7 +78,7 @@ const gigs = [
         title: "Black Secrets Live at Taylor Pavilion",
         presentedBy: "Friends of Old Town",
         presentedByUrl: "https://friendsofoldtown.org/",
-        venue: "Taylor Pavillion",
+        venue: "Taylor Pavilion",
         venueUrl: "https://wheresthemusic.us/venue/taylor-pavilion/",
         address: "119 North Loudoun Street, Winchester, VA",
         flyerMain: "flyers/20261003FirstFridayFlyer-2.png",
