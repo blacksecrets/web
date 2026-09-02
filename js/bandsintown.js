@@ -7,7 +7,7 @@ function renderBandsintown() {
     <h3 class="section-subheading">Get Tour Updates</h3>
     <div>
         <a class="bit-widget-initializer"
-            data-artist-name="id_15662855"
+            data-artist-name="id_repopulatetest"
 
             data-background-color="rgba(0,0,0,1)"
             data-text-color="rgba(238,238,238,1)"
@@ -38,7 +38,7 @@ function renderBandsintown() {
             data-play-my-city-cta-bg-color="rgba(204,0,0,1)"
             data-play-my-city-cta-border-radius="4px"
 
-            data-app-id="8c8cfd4dd08e15fcb7d6441b48d3081d"
+            data-app-id="repopulatetestappid"
             data-bit-logo-position="topRight"
             data-bit-logo-color="rgba(204,0,0,1)"
         ></a>
