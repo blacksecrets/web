@@ -68,7 +68,7 @@ const gigs = [
         address: "1160 Millwood Pike, Winchester, VA 22602",
         flyerMain: "flyers/20260905BlueFox_Flyer.png",
         freeAdmission: false,
-        customTicketsText: "$5 door cover",
+        customTicketsText: "$25 door cover",
         ticketMode: "custom",
         withArtists: "BLISS"
     },
