@@ -118,19 +118,6 @@ const gigs = [
         // time and flyerMain: TBD
     },
     {
-        id: "test-venue-hall-2027-06-15",
-        date: "Tuesday, June 15, 2027",
-        title: "ZZZ TEST DELETE ME - Flyer Verification",
-        with: [{ name: "Changed Opener", url: "https://changed.example.com" }, { name: "Third New Act", url: "" }],
-        doorsTime: "6:30 PM",
-        openerTime: "7:30 PM",
-        headlinerTime: "9:00 PM",
-        venue: "Test Venue Hall",
-        address: "123 Test Street, Testville, VA",
-        ticketMode: "free",
-        flyerMain: "flyers/test-venue-hall-2027-06-15.png"
-    },
-    {
         id: "old-test-venue-2020-01-15",
         date: "Wednesday, January 15, 2020",
         title: "ZZZ TEST DELETE ME - Past Gig For Import",
