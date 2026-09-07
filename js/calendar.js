@@ -121,7 +121,7 @@ const gigs = [
         id: "test-venue-hall-2027-06-15",
         date: "Tuesday, June 15, 2027",
         title: "ZZZ TEST DELETE ME - Flyer Verification",
-        with: [{ name: "Test Opener Band", url: "https://example.com/opener" }, { name: "Second Support Act", url: "" }],
+        with: [{ name: "Changed Opener", url: "https://changed.example.com" }, { name: "Third New Act", url: "" }],
         doorsTime: "6:30 PM",
         openerTime: "7:30 PM",
         headlinerTime: "9:00 PM",
