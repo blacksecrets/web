@@ -116,18 +116,6 @@ const gigs = [
         withArtists: "Siamese Dreamers - A Tribute to The Smashing Pumpkins",
         withArtistsUrl: "https://www.siamesedreamers.com/"
         // time and flyerMain: TBD
-    },
-    {
-        id: "test-venue-hall-2027-06-15",
-        date: "Tuesday, June 15, 2027",
-        title: "ZZZ TEST DELETE ME - Flyer Verification",
-        with: [{ name: "", url: "" }, { name: "", url: "" }],
-        doorsTime: "6:30 PM",
-        openerTime: "7:30 PM",
-        headlinerTime: "9:00 PM",
-        venue: "Test Venue Hall",
-        address: "123 Test Street, Testville, VA",
-        ticketMode: "free"
     }
     // Add new gigs above this line
 ];
