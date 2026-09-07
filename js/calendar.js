@@ -129,6 +129,13 @@ const gigs = [
         address: "123 Test Street, Testville, VA",
         ticketMode: "free",
         flyerMain: "flyers/test-venue-hall-2027-06-15.png"
+    },
+    {
+        id: "old-test-venue-2020-01-15",
+        date: "Wednesday, January 15, 2020",
+        title: "ZZZ TEST DELETE ME - Past Gig For Import",
+        venue: "Old Test Venue",
+        address: "999 Past Street, Testville, VA"
     }
     // Add new gigs above this line
 ];
