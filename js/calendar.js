@@ -127,7 +127,8 @@ const gigs = [
         headlinerTime: "9:00 PM",
         venue: "Test Venue Hall",
         address: "123 Test Street, Testville, VA",
-        ticketMode: "free"
+        ticketMode: "free",
+        flyerMain: "flyers/test-venue-hall-2027-06-15.png"
     }
     // Add new gigs above this line
 ];
