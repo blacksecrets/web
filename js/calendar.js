@@ -116,13 +116,6 @@ const gigs = [
         withArtists: "Siamese Dreamers - A Tribute to The Smashing Pumpkins",
         withArtistsUrl: "https://www.siamesedreamers.com/"
         // time and flyerMain: TBD
-    },
-    {
-        id: "old-test-venue-2020-01-15",
-        date: "Wednesday, January 15, 2020",
-        title: "ZZZ TEST DELETE ME - Past Gig For Import",
-        venue: "Old Test Venue",
-        address: "999 Past Street, Testville, VA"
     }
     // Add new gigs above this line
 ];
