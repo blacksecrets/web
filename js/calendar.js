@@ -116,6 +116,16 @@ const gigs = [
         withArtists: "Siamese Dreamers - A Tribute to The Smashing Pumpkins",
         withArtistsUrl: "https://www.siamesedreamers.com/"
         // time and flyerMain: TBD
+    },
+    {
+        id: "c29ecfa3-8caa-4474-a403-f84b02fb4300",
+        date: "Saturday, October 24, 2026",
+        title: "Boos and Brews 6",
+        with: [{ name: "Shout and the Devil (Motley Crue Tribute)", url: "" }, { name: "AKA (Godsmack Tribute)", url: "" }, { name: "Jaded", url: "" }, { name: "Angerbox", url: "" }, { name: "Promising Leith", url: "" }, { name: "Revv", url: "" }],
+        venue: "Cumberland Outdoor Club",
+        address: "31 Thomas St, Cumberland, MD, 21502",
+        ticketMode: "url",
+        ticketsUrl: "https://ticketbud.com/events/1386d4d4-a7ae-11f1-b891-42010a71701f"
     }
     // Add new gigs above this line
 ];
