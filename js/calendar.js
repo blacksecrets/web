@@ -104,7 +104,7 @@ const gigs = [
         withArtistsUrl: "https://www.facebook.com/GuerrillaRadioBand/"
         // time and flyerMain: TBD
     },
-            {
+                {
         id: "bright-box-2027-02-14",
         date: "Sunday, February 14, 2027",
         title: "Black Secrets Live at Bright Box",
