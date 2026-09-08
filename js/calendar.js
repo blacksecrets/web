@@ -45,18 +45,16 @@
     },
 */
 const gigs = [
-    {
+        {
         id: "salisbury-center-2026-10-03",
         date: "Friday, October 3, 2026",
         time: "Doors: 7PM - Show: 8PM",
         title: "Black Secrets Live at The Salisbury Center",
-        withArtists: "Attica - A Nirvana Tribute",
+        with: [{ name: "Attica - A Nirvana Tribute", url: "" }],
         venue: "The Salisbury Center",
-        // Venue name links to the same place as the Tickets button.
         venueUrl: "https://www.bandsintown.com/t/108837980?app_id=8c8cfd4dd08e15fcb7d6441b48d3081d&came_from=700&ticket_id=2050999819&utm_campaign=ticket_tktpp&utm_medium=web&utm_source=widget",
         address: "119 North Loudoun Street, Winchester, VA",
-        flyerMain: "flyers/20260903SalisburyCenterFlyer.png",
-        ticketsUrl: "https://www.bandsintown.com/t/108837980?app_id=8c8cfd4dd08e15fcb7d6441b48d3081d&came_from=700&ticket_id=2050999819&utm_campaign=ticket_tktpp&utm_medium=web&utm_source=widget"
+        flyerMain: "flyers/20260903SalisburyCenterFlyer.png"
     },
     {
         id: "blue-fox-2026-10-05",
