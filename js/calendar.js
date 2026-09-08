@@ -104,16 +104,15 @@ const gigs = [
         withArtistsUrl: "https://www.facebook.com/GuerrillaRadioBand/"
         // time and flyerMain: TBD
     },
-    {
+        {
         id: "bright-box-2027-02-14",
         date: "Sunday, February 14, 2027",
         title: "Black Secrets Live at Bright Box",
+        with: [{ name: "Siamese Dreamers - A Tribute to The Smashing Pumpkins", url: "https://www.siamesedreamers.com/" }],
         venue: "Bright Box",
         venueUrl: "https://brightboxwinchester.com/",
         address: "15 N Loudoun St, Winchester, VA 22601",
-        withArtists: "Siamese Dreamers - A Tribute to The Smashing Pumpkins",
-        withArtistsUrl: "https://www.siamesedreamers.com/"
-        // time and flyerMain: TBD
+        flyerMain: "flyers/bright-box-2027-02-14.png"
     },
     {
         id: "c29ecfa3-8caa-4474-a403-f84b02fb4300",
