@@ -72,13 +72,11 @@ const gigs = [
         ticketMode: "custom",
         withArtists: "BLISS"
     },
-    {
+        {
         id: "taylor-pavilion-2026-10-02",
         date: "Friday, October 2, 2026",
         time: "Time-TBD",
         title: "Black Secrets Live at Taylor Pavilion!",
-        presentedBy: "Friends of Old Town",
-        presentedByUrl: "https://friendsofoldtown.org/",
         venue: "Taylor Pavilion",
         venueUrl: "https://wheresthemusic.us/venue/taylor-pavilion/",
         address: "119 North Loudoun Street, Winchester, VA",
