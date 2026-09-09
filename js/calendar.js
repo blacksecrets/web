@@ -45,7 +45,7 @@
     },
 */
 const gigs = [
-                {
+                    {
         id: "salisbury-center-2026-10-03",
         date: "Saturday, October 3, 2026",
         time: "Doors: 7PM - Show: 8PM",
