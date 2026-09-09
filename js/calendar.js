@@ -45,9 +45,9 @@
     },
 */
 const gigs = [
-        {
+            {
         id: "salisbury-center-2026-10-03",
-        date: "Friday, October 3, 2026",
+        date: "Saturday, October 3, 2026",
         time: "Doors: 7PM - Show: 8PM",
         title: "Black Secrets Live at The Salisbury Center",
         with: [{ name: "Attica - A Nirvana Tribute", url: "" }],
