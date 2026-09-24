@@ -45,16 +45,19 @@
     },
 */
 const gigs = [
-                                                        {
+                                                            {
         id: "cumberland-outdoor-club-2026-10-25",
         date: "Saturday, October 24, 2026",
         time: "Time: 8PM",
         title: "Black Secrets Live at Cumberland Outdoor Club",
         with: [{ name: "Shout at the Devil (Mötley Crüe Tribute)", url: "https://www.facebook.com/p/Shout-at-the-Devil-Motley-Crue-Tribute-61565615579721/" }],
+        doorsTime: "4:00 PM",
         venue: "Cumberland Outdoor Club",
         venueUrl: "https://www.cumberlandoutdoorclub.com/",
         address: "31 Thomas St, Cumberland, MD 21502",
-        flyerMain: "flyers/20261024CumberlandOutdoorClub.png"
+        flyerMain: "flyers/20261024CumberlandOutdoorClub.png",
+        ticketMode: "url",
+        ticketsUrl: "https://ticketbud.com/events/1386d4d4-a7ae-11f1-b891-42010a71701f"
     },
     {
         id: "bar-xiii-2026-11-28",
