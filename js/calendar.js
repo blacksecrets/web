@@ -45,19 +45,18 @@
     },
 */
 const gigs = [
-                                            {
+                                                {
         id: "blue-fox-2026-10-05",
-        date: "Friday, October 5, 2026",
+        date: "Wednesday, August 5, 2026",
         time: "Time: 8PM",
         title: "Black Secrets Live at Blue Fox",
+        with: [{ name: "BLISS", url: "" }],
         venue: "Blue Fox Billiards Bar & Grill",
         venueUrl: "https://bluefoxbilliards.com/",
         address: "1160 Millwood Pike, Winchester, VA 22602",
         flyerMain: "flyers/20260905BlueFox_Flyer.png",
-        freeAdmission: false,
-        customTicketsText: "$25 door cover",
         ticketMode: "custom",
-        withArtists: "BLISS"
+        customTicketsText: "$25 door cover"
     },
         {
         id: "cumberland-outdoor-club-2026-10-25",
