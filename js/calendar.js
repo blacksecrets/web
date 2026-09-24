@@ -45,7 +45,7 @@
     },
 */
 const gigs = [
-                                                            {
+                                                                {
         id: "cumberland-outdoor-club-2026-10-25",
         date: "Saturday, October 24, 2026",
         time: "Time: 8PM",
