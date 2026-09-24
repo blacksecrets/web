@@ -71,17 +71,6 @@ const gigs = [
         withArtists: "BLISS"
     },
         {
-        id: "taylor-pavilion-2026-10-02",
-        date: "Friday, October 2, 2026",
-        time: "Time-TBD",
-        title: "Black Secrets Live at Taylor Pavilion!",
-        venue: "Taylor Pavilion",
-        venueUrl: "https://wheresthemusic.us/venue/taylor-pavilion/",
-        address: "119 North Loudoun Street, Winchester, VA",
-        flyerMain: "flyers/20261003FirstFridayFlyer-2.png",
-        ticketMode: "free"
-    },
-    {
         id: "cumberland-outdoor-club-2026-10-25",
         date: "Saturday, October 25, 2026",
         time: "Time: 8PM",
