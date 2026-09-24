@@ -46,19 +46,6 @@
 */
 const gigs = [
                                             {
-        id: "salisbury-center-2026-10-03",
-        date: "Wednesday, September 9, 2026",
-        time: "Doors: 7PM - Show: 8PM",
-        title: "Black Secrets Live at The Salisbury Center",
-        with: [{ name: "Attica - A Nirvana Tribute", url: "" }],
-        venue: "The Salisbury Center",
-        venueUrl: "https://www.bandsintown.com/t/108837980?app_id=8c8cfd4dd08e15fcb7d6441b48d3081d&came_from=700&ticket_id=2050999819&utm_campaign=ticket_tktpp&utm_medium=web&utm_source=widget",
-        address: "119 North Loudoun Street, Winchester, VA",
-        flyerMain: "flyers/20260903SalisburyCenterFlyer.png",
-        ticketMode: "url",
-        ticketsUrl: "https://www.bandsintown.com/t/108837980?app_id=8c8cfd4dd08e15fcb7d6441b48d3081d&came_from=700&ticket_id=2050999819&utm_campaign=ticket_tktpp&utm_medium=web&utm_source=widget"
-    },
-    {
         id: "blue-fox-2026-10-05",
         date: "Friday, October 5, 2026",
         time: "Time: 8PM",
