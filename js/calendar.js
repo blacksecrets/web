@@ -45,9 +45,9 @@
     },
 */
 const gigs = [
-                                                {
+                                                    {
         id: "cumberland-outdoor-club-2026-10-25",
-        date: "Saturday, October 25, 2026",
+        date: "Saturday, October 24, 2026",
         time: "Time: 8PM",
         title: "Black Secrets Live at Cumberland Outdoor Club",
         venue: "Cumberland Outdoor Club",
